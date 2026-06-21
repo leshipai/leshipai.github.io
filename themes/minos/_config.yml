@@ -12,6 +12,7 @@ open_graph:
 # Website's logo shown on the left of the navigation bar.
 logo:
   text: Leshipai
+  image: /images/logo.png
 
 article:
   # Show word count and estimated reading time.
