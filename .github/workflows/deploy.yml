@@ -20,7 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # needed if you use git-based metadata (e.g. last-updated)
+          submodules: recursive  # pulls in themes/minos
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
