@@ -1,0 +1,46 @@
+# Website's icon url.
+favicon: /favicon.png
+
+# Open Graph metadata (https://hexo.io/docs/helpers.html#open-graph)
+open_graph:
+  twitter_id:
+  twitter_site:
+  google_plus:
+  fb_admins:
+  fb_app_id:
+
+# Website's logo shown on the left of the navigation bar.
+logo:
+  text: Leshipai
+
+article:
+  # Show word count and estimated reading time.
+  readtime: false
+  # Code highlight theme
+  highlight: atom-one-light
+  # Date format: relative | full | relative_full | full_relative
+  date_format: relative
+
+# Navigation bar menu links.
+menu:
+  Archives: /archives
+  Categories: /categories
+  About: /about
+
+# Navigation bar toc settings
+toc: true
+
+# Other plugins and their settings.
+plugins:
+  gallery: true
+  clipboard: true
+
+# Additional navigation bar links on the right.
+navbar_links:
+  GitHub:
+    icon: fab fa-github
+    url: https://github.com/leshipai
+
+# Links at the bottom of the page.
+footer_links:
+  GitHub: https://github.com/leshipai
