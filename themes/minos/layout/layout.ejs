@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <%- partial('common/head') %>
+    <script>
+        // Restore dark mode preference before first paint to prevent flash
+        if (localStorage.getItem('dark-mode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <%- partial('common/navbar', { page }) %>
+    <%- body %>
+    <%- partial('common/footer') %>
+    <%- partial('common/scripts') %>
+
+    <% if (has_config('search.type')) { %>
+    <%- partial('search/' + get_config('search.type')) %>
+    <% } %>
+</body>
+</html>
