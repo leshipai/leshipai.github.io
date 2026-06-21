@@ -41,6 +41,9 @@ navbar_links:
   GitHub:
     icon: fab fa-github
     url: https://github.com/leshipai
+  Discord:
+    icon: fab fa-discord
+    url: https://discord.com/users/1441087797585772564
 
 # Links at the bottom of the page.
 footer_links:
