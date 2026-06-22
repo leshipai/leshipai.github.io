@@ -1,6 +1,6 @@
 # leshipai.github.io
 
-> Source code for my personal blog at **[blog.leshipai.dev](https://blog.leshipai.dev)**
+> Source code for blog at **[blog.leshipai.dev](https://blog.leshipai.dev)**
 
 A statically generated blog built with Hexo and deployed to GitHub Pages. Posts are written in Markdown and the site is automatically built and published via GitHub Actions on every push.
 
