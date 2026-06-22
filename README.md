@@ -6,7 +6,7 @@ A statically generated blog built with Hexo and deployed to GitHub Pages. Posts 
 
 ---
 
-## 🛠️ Stack
+##  Stack
 
 | Layer | Technology |
 |---|---|
@@ -21,7 +21,7 @@ A statically generated blog built with Hexo and deployed to GitHub Pages. Posts 
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 .
@@ -38,7 +38,7 @@ A statically generated blog built with Hexo and deployed to GitHub Pages. Posts 
 
 ---
 
-## ⚡ Local Development
+##  Local Development
 
 ```bash
 # Install dependencies
@@ -56,7 +56,7 @@ npm run clean
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 The site deploys to GitHub Pages via the `hexo-deployer-git` plugin.
 
