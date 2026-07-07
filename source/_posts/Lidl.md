@@ -10,7 +10,7 @@ tags:
   - Hacktoria
 ---
 
-![My Hot Lidl Summer](my-hot-lidl-summer-poster.png)
+![My Hot Lidl Summer](pster.png)
 
 <!-- more -->
 
@@ -55,7 +55,7 @@ Now that we have the country, narrowing down to the state: if you pay close atte
 
 I also came across this [article](https://www.washingtonpost.com/news/business/wp/2017/02/15/a-first-look-at-how-german-grocer-lidl-plans-to-conquer-the-u-s-market/?utm_term=.76c6c0d0eead) about the architectural prototype visible in the image. We learn that it's mostly on the East Coast. Using the front plate data we remove several states and remain with: North Carolina, South Carolina, Delaware, Georgia, and Florida.
 
-That's better than the whole country. Looking back at the [article](https://www.washingtonpost.com/news/business/wp/2017/02/15/a-first-look-at-how-german-grocer-lidl-plans-to-conquer-the-u-s-market/?utm_term=.76c6c0d0eead), it explicitly mentions South and North Carolina. From here on it was just brute force — going through the Lidls in each state — and I eventually found it in North Carolina.
+That's better than the whole country. Looking back at the [article](https://www.washingtonpost.com/news/business/wp/2017/02/15/a-first-look-at-how-german-grocer-lidl-plans-to-conquer-the-u-s-market/?utm_term=.76c6c0d0eead), it explicitly mentions South and North Carolina. From here on it was just brute force , going through the Lidls in each state and I eventually found it in North Carolina.
 
 <iframe src="https://www.google.com/maps/embed?pb=!4v1783428991045!6m8!1m7!1sxAT_bHsilrmDFuUaEbytDQ!2m2!1d35.83988572702116!2d-78.61121426326157!3f93.64898068782827!4f1.1154405623385628!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
@@ -204,7 +204,5 @@ The challenge said *"That random logo looks sus..."* — so my inference was tha
 ---
 
 # Conclusion
-
-This was a well-designed CTF with challenges that rewarded both methodical research and creative thinking. The geolocation tasks in particular forced me to chain together multiple techniques — reverse image search, license plate legislation, architectural analysis, and good old brute force — to narrow down locations across three continents.
 
 If you're into OSINT, Hacktoria's Discord server runs challenges around the clock and is well worth joining: https://discord.gg/WyjtaBKGcz
