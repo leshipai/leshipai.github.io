@@ -12,7 +12,7 @@ tags:
 
 ![My Hot Lidl Summer](my-hot-lidl-summer-poster.png)
 
-**My Hot Lidl Summer** was a Lidl-themed OSINT CTF hosted by [Hacktoria](https://hacktoria.com/). The challenges ranged from geolocating storefronts across multiple countries to digging through web archives and tracking down obscure corporate history. Below is my walkthrough of each challenge — the methodology, the dead ends, and the answers.
+<!-- more -->
 
 ---
 
