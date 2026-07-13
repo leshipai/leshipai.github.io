@@ -13,7 +13,7 @@ tags:
 ![My Hot Lidl Summer](pster.png)
 
 <!-- more -->
-
+The CTF event hosted by Hacktoria featured Geolocating Lidl stores around the world.What Follows is the approach I took to solve the challenges:
 ---
 
 # Location 1
