@@ -1,6 +1,6 @@
 # About Me
 
-Hi, I'm Leshipai.An Osint and Web Security researcher. The Blog features writeups across web security , OSINT and Algorithmic problem solving.
+Hi, I'm Leshipai.The Blog features writeups across web security and OSINT.
 
 This blog was inspired by [Huli's blog](https://blog.huli.tw/en/)
 ## Contact
