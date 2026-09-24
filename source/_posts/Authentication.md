@@ -1,5 +1,3 @@
-
-
 ---
 title: "Portswigger Auth Labs"
 date: 2026-09-24
