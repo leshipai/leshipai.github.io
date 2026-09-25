@@ -12,7 +12,6 @@ tags:
 The Past weekend I took part solo in the Monthly Hacktoria CTF event. The CTF event featured Geolocating Lidl stores around the world. What follows is the approach I took to solve the challenges. 
 
 <!-- more -->
---
 ---
 
 # Location 1
