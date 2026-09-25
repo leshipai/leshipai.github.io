@@ -24,8 +24,8 @@ Password Bruteforce -> With the enumerated username , bruteforce with the candid
 Trying to enumerate the username -> Observing the message that pops up on an invalid attempt to login `Invalid username or password` , you notice one of the usernames generate a different message `Invalid username or password` . It's missing a period(.). 
 
 ### Lab: Username enumeration via response timing
-We have valid creds `wiener:peter` which we can use to check the behavior of the site on correct creds. With a wrong username the response time is fast(~191ms). Hypothesis: The app might be checking if the username is correct before validating the password. 
-To test this , we send the correct username and a very long password. We find that the response time is longer(~1,134ms). With the candidate usernames list and this obscenely long password , we can enumerate the username.
+We have valid creds `wiener:peter` which we can use to check the behavior of the site on correct creds. With a wrong username the response time is fast(191ms). Hypothesis: The app might be checking if the username is correct before validating the password. 
+To test this , we send the correct username and a very long password. We find that the response time is longer(1,134ms). With the candidate usernames list and this obscenely long password , we can enumerate the username.
 Caveat: There is rate limiting in place. Fix: Use `X-Forwarded-For` header to bypass.
 
 ### Lab: Broken brute-force protection, IP block
