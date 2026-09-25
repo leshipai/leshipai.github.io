@@ -35,3 +35,5 @@ Based on what i read on the module earlier(and a nudge from siunam's [blog](http
 Next is crafting the payloads to match this format. One important thing to note is that the number of concurrent request should be 1 during the brute-force attack.(and not the default 10 on burp)
 
 
+### Lab: Username enumeration via account lock
+

@@ -9,13 +9,10 @@ tags:
   - CTF
   - Hacktoria
 ---
-
-![My Hot Lidl Summer](pster.png)
+The Past weekend I took part solo in the Monthly Hacktoria CTF event. The CTF event featured Geolocating Lidl stores around the world. What follows is the approach I took to solve the challenges. 
 
 <!-- more -->
----
-The CTF event(hosted by Hacktoria) featured Geolocating Lidl stores around the world. What follows is the approach I took to solve the challenges.
-
+--
 ---
 
 # Location 1
@@ -190,21 +187,6 @@ We find this [article](https://www.teltarif.de/lidl-connect-test-erster-eindruck
 So the date is **1st October 2015**.
 
 ---
-
-# Easter Egg
-
-![Easter Egg Challenge Image](random-lidl-logo.jpg)
-
-## Solution
-
-A RIS yields two sources — [1](https://www.shutterstock.com/editorial/image-editorial/lidl-logo-seen-stand-international-agricultural-show-16693948ah) and [2](https://www.franceinfo.fr/economie/emploi/lidl-france-annonce-vouloir-supprimer-jusqu-a-550-postes-administratifs-sans-depart-contraint_7926218.html) — both pointing to the *International Agricultural Show (Salon De L'Agriculture) at Paris Expo Porte De Versailles in Paris, France, on February 23, 2026*.
-
-We can find the Lidl stand [here](https://www.salon-agriculture.com/en/exhibitors-and-visiting-tools/catalog/exhibitor/Lidl-France-2), where the address to the Lidl HQ in France is also listed.
-
-The challenge said *"That random logo looks sus..."* — so my inference was that it was not a logo at a store but at an exhibition.
-
----
-
 # Conclusion
 
 If you're into OSINT, Hacktoria's Discord server runs challenges around the clock and is well worth joining: https://discord.gg/WyjtaBKGcz
