@@ -36,4 +36,17 @@ Next is crafting the payloads to match this format. One important thing to note 
 
 
 ### Lab: Username enumeration via account lock
+Trying to login with random usernames(obviously wrong) and passwords into the site triggers no lockout/timeout errors and just shows `Invalid username or password.` . This provides the perfect username enumeration scenario where upon being provided with a wordlist of potential usernames and a bunch of wrong passwords would show a different error on the correct username.
+Testing this theory by adding a `grep -match` rule to our intruder attack , we are able to find a username `atlanta` that shows a different error `You have made too many incorrect login attempts. Please try again in 1 minute(s).`
+
+Now we have a username and just need to brute the password. At first i thought of different ways to bypass the rate limiting using the headers but no luck once again(or maybe i didn't try hard enough.) 
+
+New Theory: Maybe the site accepts a correct credential pair as soon as it sees one and does not care much about the rate limit in place.
+
+Time to test it. I just bruteforced the username against the candidate passwords and grep -matched both the errors from before and filter to find the request that doesn't have either.
+
+The theory actually worked and by filtering both errors out we were left with only the single request that had the correct password. The request had a different response code too making it stand out.
+
+
+
 
