@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Lidl.md",
+                "file": "source/_posts/Authentication.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lidl"
+              "title": "Authentication"
+            }
+          },
+          {
+            "id": "d4634d5d9b1adba3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "source/_posts/BugForge.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "BugForge"
             }
           },
           {
@@ -35,7 +49,8 @@
               "title": "Authentication"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -202,9 +217,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "2c69ec1fb3fb5e06",
+  "active": "a6e64bfcd43d3105",
   "lastOpenFiles": [
+    "source/_posts/Bugforge/Pasted image 20260928222452.png",
+    "source/_posts/Bugforge/Pasted image 20260928222004.png",
+    "source/_posts/Bugforge/Pasted image 20260928221925.png",
+    "source/_posts/Bugforge/Pasted image 20260928221827.png",
+    "source/_posts/Bugforge/Pasted image 20260928221346.png",
+    "source/_posts/Bugforge/Pasted image 20260928221245.png",
+    "source/_posts/Bugforge/Pasted image 20260928220906.png",
+    "source/_posts/Bugforge",
     "source/_posts/Authentication.md",
+    "source/_posts/BugForge.md",
     "source/_posts/Lidl.md"
   ]
 }
