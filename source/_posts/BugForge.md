@@ -16,7 +16,9 @@ In the following writeup , I try to tackle and document the Broken Access Contro
 
 On loading the challenge site we get a signup/login form where we are able to create an account and an organization/team.
 
-![](Pasted_image_20260928220906.png)We register two accounts `victim1` and `victim2` for test purposes. 
+![](Pasted_image_20260928220906.png)
+
+We register two accounts `victim1` and `victim2` for test purposes. 
 
 Off the rip , the most interesting functionality is the team and add team functionality
 
@@ -35,6 +37,7 @@ Now let's see if it worked by trying to login as `victim2` using his password fr
 ![](Pasted_image_20260928221925.png)
 
 Lets try the new password `123`:
+
 ![](Pasted_image_20260928222004.png)
 
 We manage to login as victim 2 and successfully identify the vulnerability: `Allows changing user credentials and data by add member to team functionality`
