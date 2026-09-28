@@ -17,7 +17,6 @@ The Past weekend I took part solo in the Monthly Hacktoria CTF event. The CTF ev
 
 # Location 1
 
-![Location 1 Challenge Image](lidl-location-01.png)
 
 ## Solution
 
