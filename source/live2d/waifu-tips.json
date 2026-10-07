@@ -1,0 +1,28 @@
+{
+  "mouseover": [],
+  "click": [],
+  "seasons": [],
+  "time": [],
+  "message": {
+    "default": [],
+    "console": "",
+    "copy": "",
+    "visibilitychange": "",
+    "changeSuccess": "",
+    "changeFail": "",
+    "photo": "",
+    "goodbye": "",
+    "hitokoto": "",
+    "welcome": "",
+    "referrer": "",
+    "hoverBody": [],
+    "tapBody": []
+  },
+  "models": [
+    {
+      "name": "Potion-Maker/Pio",
+      "paths": ["/live2d/model/Potion-Maker/Pio/index.json"],
+      "message": ""
+    }
+  ]
+}

@@ -2,12 +2,13 @@
 title: "My Hot Lidl Summer - OSINT CTF Writeup"
 date: 2026-07-07 17:00:00
 categories:
-  - Writeups
+  - [Writeups]
 tags:
   - OSINT
   - GeoINT
   - CTF
   - Hacktoria
+cover: /images/avatar.png
 ---
 The Past weekend I took part solo in the Monthly Hacktoria CTF event. The CTF event featured Geolocating Lidl stores around the world. What follows is the approach I took to solve the challenges. 
 

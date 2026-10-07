@@ -2,9 +2,10 @@
 title: "Portswigger Auth Labs"
 date: 2026-09-24
 categories:
-  - Writeups
+  - [Writeups]
 tags:
   - Web
+cover: /images/avatar.png
 ---
 
 This post kicks off a series documenting my walkthroughs of the PortSwigger Web Security Academy labs. Herein, I’m revisiting the Authentication module.

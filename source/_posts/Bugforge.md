@@ -2,9 +2,10 @@
 title: BugForge Galaxy Dash 006
 date: 2026-09-28
 categories:
-  - Writeups
+  - [Writeups]
 tags:
   - Web
+cover: /images/avatar.png
 ---
 
 In the following writeup , I try to tackle and document the Broken Access Control tagged labs from BugForge.io named Galaxy-Dash-006

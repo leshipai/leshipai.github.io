@@ -1,0 +1,1357 @@
+// =====================================================================
+// LESHIPAI — custom layer
+// Compiled to /css/custom.css and linked AFTER the theme stylesheet.
+//
+// Palette: jet-black void with silver-lavender accents, inspired by
+// the "White-Haired Figure in Black Void" image.
+//
+// Primary:   #5cb8ff  (cool steel blue)
+// Secondary: #a8d8ff  (ice blue highlight)
+// Dim:       #1e6bc4  (deep steel blue)
+// BG dark:   #080808  (near-absolute black)
+// Card:      #111018  (dark void card)
+// =====================================================================
+
+// ---------- 0. Custom font: The Witches ---------------------------
+
+@font-face
+  font-family: 'TheWitches'
+  src: url('/fonts/TheWitches.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+  font-display: swap
+
+// ---------- 2. Palette (dark-first, void aesthetic) -----------------
+
+// Always hide the FPS counter
+#fps-box
+  display: none !important
+
+[data-theme='dark']
+  --global-bg: #0e1622
+  --card-bg: #111c2c
+  --sidebar-bg: #111c2c
+  --sidebar-menu-bg: #141e2e
+  --search-bg: #0e1824
+  --font-color: rgba(238, 235, 252, 0.88)
+  --text-highlight-color: #e8f4ff
+  --card-meta: #7aaac8
+  --white: rgba(238, 235, 252, 0.95)
+  --light-grey: rgba(238, 235, 252, 0.65)
+  --dark-grey: rgba(238, 235, 252, 0.15)
+  --card-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(80, 160, 240, 0.06)
+  --card-hover-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(80, 160, 240, 0.22)
+  --scrollbar-color: rgba(80, 160, 240, 0.3)
+  --text-bg-hover: rgba(70, 150, 235, 0.75)
+  --void-glow: 0 0 30px rgba(80, 160, 240, 0.18)
+  --void-glow-strong: 0 0 50px rgba(80, 160, 240, 0.35)
+
+[data-theme='light']
+  --global-bg: #fff0f5
+  --card-bg: #fff7fa
+  --sidebar-bg: #fff7fa
+  --sidebar-menu-bg: #ffeaf2
+  --search-bg: #ffdde8
+  --font-color: rgba(42, 18, 28, 0.88)
+  --text-highlight-color: #2a121c
+  --card-meta: #b0607a
+  --white: rgba(42, 18, 28, 0.95)
+  --light-grey: rgba(42, 18, 28, 0.55)
+  --dark-grey: rgba(42, 18, 28, 0.12)
+  --card-box-shadow: 0 4px 18px rgba(220, 80, 120, 0.08)
+  --card-hover-box-shadow: 0 8px 28px rgba(220, 80, 120, 0.16), 0 0 0 1px rgba(220, 80, 120, 0.18)
+  --scrollbar-color: rgba(220, 80, 120, 0.3)
+  --text-bg-hover: rgba(220, 80, 120, 0.75)
+
+// ---- Light mode pink overrides ------------------------------------
+
+[data-theme='light'] #nav
+  background: rgba(255, 240, 245, 0.88) !important
+  backdrop-filter: blur(20px) !important
+  -webkit-backdrop-filter: blur(20px) !important
+  border-bottom: 1px solid rgba(220, 80, 120, 0.12) !important
+
+[data-theme='light'] .nav-fixed #nav
+  background: rgba(255, 240, 245, 0.96) !important
+
+[data-theme='light'] #blog_name #site-name
+  color: #2a121c
+
+[data-theme='light'] #blog_name #site-name:hover,
+[data-theme='light'] .nav-button a:hover
+  color: #dc5078
+
+[data-theme='light'] .card-widget
+  border-color: rgba(220, 80, 120, 0.1)
+
+[data-theme='light'] .card-widget:hover
+  border-color: rgba(220, 80, 120, 0.28)
+
+[data-theme='light'] .card-widget .item-headline i
+  color: #dc5078
+
+[data-theme='light'] .card-widget .item-headline
+  border-bottom-color: rgba(220, 80, 120, 0.14)
+
+[data-theme='light'] .recent-post-item .article-title
+  color: #2a121c
+
+[data-theme='light'] .recent-post-item:hover .article-title
+  color: #dc5078
+
+[data-theme='light'] .recent-post-item .content
+  color: rgba(80, 30, 50, 0.72)
+
+[data-theme='light'] .article-meta__categories
+  background: rgba(220, 80, 120, 0.1)
+  color: #c04060
+  border-color: rgba(220, 80, 120, 0.22)
+
+[data-theme='light'] .article-meta__categories:hover
+  background: rgba(220, 80, 120, 0.2)
+  color: #dc5078
+
+[data-theme='light'] .article-meta__tags
+  color: #a05060
+
+[data-theme='light'] .article-meta__tags::before
+  color: rgba(220, 80, 120, 0.55)
+
+[data-theme='light'] .article-meta__tags:hover
+  color: #dc5078
+
+[data-theme='light'] .article-meta-time i
+  color: rgba(220, 80, 120, 0.6)
+
+[data-theme='light'] #category-bar .category-bar-item a
+  border-color: rgba(220, 80, 120, 0.18)
+  color: #a05060
+  background: #fff7fa
+
+[data-theme='light'] #category-bar .category-bar-item a:hover
+  border-color: #dc5078
+  color: #dc5078
+  background: rgba(220, 80, 120, 0.08)
+
+[data-theme='light'] #category-bar .category-bar-item.is-active a
+  border-color: #dc5078
+  background: rgba(220, 80, 120, 0.12)
+  color: #b03050
+
+[data-theme='light'] #aside-content .card-author .author-name a
+  color: #2a121c
+
+[data-theme='light'] #aside-content .card-author .author-avatar
+  border-color: rgba(220, 80, 120, 0.35)
+  box-shadow: 0 0 18px rgba(220, 80, 120, 0.18)
+
+[data-theme='light'] #aside-content .card-author .author-avatar:hover
+  border-color: rgba(220, 80, 120, 0.65)
+  box-shadow: 0 0 32px rgba(220, 80, 120, 0.35)
+
+[data-theme='light'] #aside-content .card-author .author-info-description
+  color: #905060
+
+[data-theme='light'] #aside-content .card-author .author-button-box a
+  background: rgba(220, 80, 120, 0.1)
+  border-color: rgba(220, 80, 120, 0.28)
+  color: #c04060
+
+[data-theme='light'] #aside-content .card-author .author-button-box a:hover
+  background: rgba(220, 80, 120, 0.2)
+  border-color: rgba(220, 80, 120, 0.55)
+  color: #dc5078
+  box-shadow: 0 0 18px rgba(220, 80, 120, 0.2)
+
+[data-theme='light'] #aside-content .card-announcement .announcement-content
+  color: #905060
+
+[data-theme='light'] #calendar-date
+  color: #dc5078 !important
+  text-shadow: 0 0 18px rgba(220, 80, 120, 0.35) !important
+
+[data-theme='light'] #schedule-days
+  color: #dc5078 !important
+  text-shadow: 0 0 18px rgba(220, 80, 120, 0.35) !important
+
+[data-theme='light'] progress::-webkit-progress-value
+  background: linear-gradient(90deg, #c04060, #f090b0) !important
+
+[data-theme='light'] progress::-moz-progress-bar
+  background: linear-gradient(90deg, #c04060, #f090b0) !important
+
+[data-theme='light'] #footer
+  background-color: #ffeaf2 !important
+  border-top-color: rgba(220, 80, 120, 0.14) !important
+
+[data-theme='light'] #count-time b
+  color: #dc5078 !important
+
+[data-theme='light'] #site-title
+  color: #2a121c !important
+  text-shadow: 0 0 40px rgba(220, 80, 120, 0.35), 0 2px 12px rgba(0,0,0,0.06) !important
+
+[data-theme='light'] #site-subtitle #subtitle
+  color: rgba(140, 60, 90, 0.8) !important
+
+[data-theme='light'] #article-container a
+  color: #c04060
+
+[data-theme='light'] #article-container a:hover
+  color: #dc5078
+
+[data-theme='light'] #article-container blockquote
+  border-left-color: #dc5078
+  background: rgba(220, 80, 120, 0.05)
+  color: rgba(80, 30, 50, 0.82)
+
+[data-theme='light'] #article-container h2
+  border-left-color: #dc5078
+
+[data-theme='light'] #article-container code:not([class])
+  background: rgba(220, 80, 120, 0.08)
+  color: #b03050
+  border-color: rgba(220, 80, 120, 0.18)
+
+[data-theme='light'] #toc-div .toc-content .toc-link.active-class
+  color: #dc5078
+  border-left-color: #dc5078
+
+[data-theme='light'] #tag-cloud-list a:hover
+  border-color: #dc5078
+  color: #dc5078
+  background: rgba(220, 80, 120, 0.07)
+
+[data-theme='light'] #pagination .pagination-button:hover
+  border-color: #dc5078
+  color: #dc5078
+  background: rgba(220, 80, 120, 0.07)
+
+[data-theme='light'] #scroll-down .scroll-down-effects
+  color: rgba(220, 80, 120, 0.7) !important
+
+[data-theme='light'] ::-webkit-scrollbar-thumb
+  background: rgba(220, 80, 120, 0.22) !important
+
+[data-theme='light'] ::-webkit-scrollbar-thumb:hover
+  background: rgba(220, 80, 120, 0.42) !important
+
+// ---------- 3. Global body & background ----------------------------
+
+body
+  background-color: var(--global-bg)
+  font-family: 'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif
+
+// Subtle void grain / noise texture on the background
+body::before
+  content: ''
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  pointer-events: none
+  z-index: 0
+  opacity: 0.025
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")
+  background-size: 200px 200px
+
+// ---------- 4. Navigation (nav bar) --------------------------------
+
+#nav
+  background: transparent !important
+  backdrop-filter: none !important
+  -webkit-backdrop-filter: none !important
+  border-bottom: none !important
+  box-shadow: none !important
+
+// Keep nav readable when scrolled over content (non-hero pages)
+.nav-fixed #nav
+  background: rgba(8, 8, 8, 0.72) !important
+  backdrop-filter: blur(16px) !important
+  -webkit-backdrop-filter: blur(16px) !important
+  border-bottom: 1px solid rgba(61, 150, 232, 0.06) !important
+
+#blog-info
+  .site-name
+    font-family: 'TheWitches', 'Outfit', sans-serif
+    font-weight: normal
+    letter-spacing: 0.06em
+    color: #e8e4f0
+    font-size: 1.3rem
+
+  .site-name:hover
+    color: #c8b8e8
+
+// Nav menu items — Morbid Spire
+#menus .site-page,
+#menus .site-page span,
+#sidebar-menus .site-page,
+#sidebar-menus .site-page span
+  font-family: 'TheWitches', 'Outfit', sans-serif
+  letter-spacing: 0.05em
+
+// Nav buttons hover
+.nav-button a:hover
+  color: #3d96e8
+
+// ---------- 5. Hero / Cover banner ---------------------------------
+
+#page-header
+  position: relative
+
+#page-header.full_page
+  background: #080808
+
+// The cover image rendered as a cinematic banner
+#post-cover
+  object-fit: cover
+  object-position: center 20%
+  filter: brightness(0.65) saturate(0.75)
+
+// Overlay gradient — void fades to dark at bottom
+#page-header::after
+  content: ''
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 60%
+  background: linear-gradient(to bottom, transparent, rgba(8, 8, 8, 0.95))
+  pointer-events: none
+
+// Site title in hero
+#site-title
+  font-family: 'TheWitches', 'Outfit', sans-serif
+  font-weight: normal
+  font-size: clamp(2.8rem, 6vw, 5rem)
+  letter-spacing: 0.18em
+  color: #eaf4ff
+  text-shadow: 0 0 60px rgba(100, 180, 255, 0.7), 0 0 120px rgba(100, 180, 255, 0.3), 0 2px 20px rgba(0,0,0,0.7)
+
+#site-subtitle #subtitle
+  font-family: 'TheWitches', 'Outfit', sans-serif
+  font-weight: normal
+  font-size: 1.05rem
+  letter-spacing: 0.25em
+  color: rgba(220, 208, 255, 0.82)
+  text-transform: lowercase
+
+// Scroll-down chevron
+#scroll-down .scroll-down-effects
+  color: rgba(61, 150, 232, 0.6)
+  animation: void-pulse 2.5s ease-in-out infinite
+
+@keyframes void-pulse
+  0%, 100%
+    opacity: 0.4
+    transform: translateY(0)
+  50%
+    opacity: 0.9
+    transform: translateY(6px)
+
+// ---------- 6. Cards (posts, sidebar) ------------------------------
+
+.card-widget,
+.recent-post-item
+  background: var(--card-bg)
+  border: 1px solid rgba(80, 160, 240, 0.12)
+  box-shadow: var(--card-box-shadow)
+  border-radius: 16px
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease
+
+.card-widget:hover,
+.recent-post-item:hover
+  box-shadow: var(--card-hover-box-shadow)
+  border-color: rgba(80, 160, 240, 0.3)
+  transform: translateY(-2px)
+
+// Card header divider
+.card-widget .item-headline
+  border-bottom: 1px solid rgba(80, 160, 240, 0.16)
+  padding-bottom: 10px
+  margin-bottom: 14px
+
+// Sidebar card header icons
+.card-widget .item-headline i
+  color: #4da8f0
+
+// ---------- 7. Post list cards  ------------------------------------
+
+// Post card image hover
+.recent-post-item .post_cover img
+  transition: transform 0.5s ease, filter 0.5s ease
+  filter: brightness(0.95) saturate(0.9)
+
+.recent-post-item:hover .post_cover img
+  transform: scale(1.04)
+  filter: brightness(1.05) saturate(1.05)
+
+// Post title link
+.recent-post-item .article-title
+  font-family: 'Outfit', sans-serif
+  font-weight: 500
+  font-size: 1.05rem
+  color: #e8f4ff
+  transition: color 0.25s
+
+.recent-post-item:hover .article-title
+  color: #a8d8ff
+
+// Excerpt text
+.recent-post-item .content
+  color: rgba(200, 196, 230, 0.78)
+  font-size: 0.88rem
+  line-height: 1.72
+
+// Category badge
+.article-meta__categories
+  background: rgba(80, 160, 240, 0.16)
+  color: #5cb8ff
+  border: 1px solid rgba(80, 160, 240, 0.28)
+  border-radius: 6px
+  padding: 2px 10px
+  font-size: 0.78rem
+  font-weight: 500
+  transition: background 0.25s, color 0.25s
+
+.article-meta__categories:hover
+  background: rgba(80, 160, 240, 0.28)
+  color: #a8d8ff
+
+// Tag pills
+.article-meta__tags
+  color: #8ab8d8
+  font-size: 0.8rem
+  transition: color 0.2s
+
+.article-meta__tags::before
+  content: '#'
+  color: rgba(80, 160, 240, 0.65)
+
+.article-meta__tags:hover
+  color: #5cb8ff
+
+// Meta (date, icons)
+.article-meta-time
+  color: var(--card-meta)
+  font-size: 0.8rem
+
+.article-meta-time i
+  color: rgba(80, 160, 240, 0.7)
+
+// ---------- 8. Sidebar author card ---------------------------------
+
+#aside-content .card-author .author-avatar
+  border: 2px solid rgba(80, 160, 240, 0.4)
+  box-shadow: 0 0 20px rgba(80, 160, 240, 0.22)
+  transition: box-shadow 0.4s ease, border-color 0.4s ease
+
+#aside-content .card-author .author-avatar:hover
+  border-color: rgba(220, 200, 255, 0.75)
+  box-shadow: 0 0 40px rgba(80, 160, 240, 0.45)
+
+// Author name
+#aside-content .card-author .author-name a
+  font-family: 'Outfit', sans-serif
+  font-weight: 600
+  color: #e8f4ff
+
+// Author description
+#aside-content .card-author .author-info-description
+  color: #8ab8d8
+  font-size: 0.85rem
+  line-height: 1.6
+
+// Follow button
+#aside-content .card-author .author-button-box a
+  background: rgba(80, 160, 240, 0.16)
+  border: 1px solid rgba(80, 160, 240, 0.32)
+  color: #5cb8ff
+  border-radius: 999px
+  padding: 6px 18px
+  font-size: 0.85rem
+  transition: all 0.25s
+
+#aside-content .card-author .author-button-box a:hover
+  background: rgba(80, 160, 240, 0.28)
+  border-color: rgba(80, 160, 240, 0.6)
+  color: #a8d8ff
+  box-shadow: 0 0 22px rgba(80, 160, 240, 0.28)
+
+// Announcement card
+#aside-content .card-announcement .announcement-content
+  color: #8ab8d8
+  font-size: 0.87rem
+  line-height: 1.65
+
+// ---------- 9. Homepage category bar --------------------------------
+
+#category-bar
+  position: relative
+  overflow: hidden
+  margin: 0 0 18px
+
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    width: 36px
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--global-bg))
+    content: ''
+    opacity: 0
+    pointer-events: none
+    transition: opacity .3s
+
+  &.has-overflow::after
+    opacity: 1
+
+  .category-bar-items
+    display: flex
+    gap: 8px
+    overflow-x: auto
+    padding: 2px 36px 6px 2px
+    scrollbar-width: none
+    scroll-behavior: smooth
+
+    &::-webkit-scrollbar
+      display: none
+
+  .category-bar-item
+    flex: 0 0 auto
+
+    a
+      display: inline-block
+      padding: 5px 16px
+      border: 1px solid rgba(80, 160, 240, 0.22)
+      border-radius: 999px
+      background: var(--card-bg)
+      color: #8ab8d8
+      font-size: 0.88em
+      font-weight: 400
+      line-height: 1.6
+      transition: all .25s ease
+
+      &:hover
+        border-color: #4da8f0
+        color: #5cb8ff
+        background: rgba(80, 160, 240, 0.12)
+
+    &.is-active a
+      border-color: #4da8f0
+      background: rgba(80, 160, 240, 0.18)
+      color: #a8d8ff
+
+#recent-posts .category-bar-empty
+  padding: 28px 4px
+  color: var(--card-meta)
+  font-size: .92em
+  text-align: center
+
+// ---------- 10. Sidebar cards: calendar + schedule ------------------
+
+#card-widget-calendar,
+#card-widget-schedule
+  .item-content
+    display: flex
+    gap: 14px
+
+  #calendar-area-left,
+  #schedule-area-left
+    flex: 0 0 40%
+
+  #calendar-area-right,
+  #schedule-area-right
+    flex: 1
+    min-width: 0
+
+#card-widget-calendar
+  #calendar-week
+    color: var(--card-meta)
+    font-size: .85em
+
+  #calendar-date
+    margin: 2px 0
+    color: #5cb8ff
+    font-size: 52px
+    font-weight: 700
+    line-height: 1.1
+    text-shadow: 0 0 22px rgba(80, 160, 240, 0.5)
+
+  #calendar-solar,
+  #calendar-month
+    color: var(--card-meta)
+    font-size: .82em
+    line-height: 1.7
+
+  #calendar-main
+    font-size: .8em
+    text-align: center
+
+    .calendar-rh a
+      color: var(--card-meta)
+
+    .calendar-d0 a
+      color: #e8a0c0
+
+    .calendar-d6 a
+      color: #3d96e8
+
+    .calendar-d0,
+    .calendar-d1,
+    .calendar-d2,
+    .calendar-d3,
+    .calendar-d4,
+    .calendar-d5,
+    .calendar-d6
+      display: inline-block
+      width: 14.28%
+      line-height: 1.9
+
+    a
+      color: var(--font-color)
+      text-decoration: none
+
+      &.now
+        border-radius: 6px
+        background: #2d7fd4
+        color: #eaf4ff
+        box-shadow: 0 0 12px rgba(80, 160, 240, 0.5)
+
+#card-widget-schedule
+  #schedule-title
+    color: var(--card-meta)
+    font-size: .85em
+
+  #schedule-days
+    margin: 2px 0
+    color: #5cb8ff
+    font-size: 44px
+    font-weight: 700
+    line-height: 1.2
+    text-shadow: 0 0 22px rgba(80, 160, 240, 0.5)
+
+  #schedule-date
+    color: var(--card-meta)
+    font-size: .82em
+
+  .schedule-r0,
+  .schedule-r1,
+  .schedule-r2
+    display: flex
+    align-items: center
+    gap: 8px
+    margin: 6px 0
+
+  .schedule-d0
+    flex: 0 0 2.6em
+    color: var(--card-meta)
+    font-size: .82em
+
+  .schedule-d1
+    flex: 1
+    min-width: 0
+
+  .aside-span1,
+  .aside-span2
+    display: inline-block
+    width: 50%
+    color: var(--font-color)
+    font-size: .78em
+    text-align: left
+
+  .aside-span2
+    text-align: right
+
+  progress
+    display: block
+    width: 100%
+    height: 5px
+    border: none
+    border-radius: 6px
+    background: rgba(80, 160, 240, 0.18)
+    appearance: none
+    -webkit-appearance: none
+    overflow: hidden
+
+    &::-webkit-progress-bar
+      border-radius: 6px
+      background: rgba(80, 160, 240, 0.18)
+
+    &::-webkit-progress-value
+      border-radius: 6px
+      background: linear-gradient(90deg, #2d7fd4, #a8d8ff)
+
+    &::-moz-progress-bar
+      border-radius: 6px
+      background: linear-gradient(90deg, #2d7fd4, #a8d8ff)
+
+// ---------- 11. Control center panel ---------------------------------
+
+#console-switch
+  display: inline
+  padding: 0 0 0 14px
+  cursor: pointer
+  vertical-align: middle
+
+  .site-page
+    transition: color .3s
+
+    &:hover
+      color: #3d96e8
+
+#console-mask
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 105
+  background: rgba(0, 0, 0, 0.6)
+  opacity: 0
+  visibility: hidden
+  transition: opacity .3s, visibility .3s
+
+  &.show
+    opacity: 1
+    visibility: visible
+
+#console
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 110
+  width: 320px
+  max-width: 86vw
+  transform: translateX(105%)
+  transition: transform .35s cubic-bezier(.22, 1, .36, 1)
+
+  &.show
+    transform: translateX(0)
+
+  .console-mainbox
+    display: flex
+    flex-direction: column
+    height: 100%
+    border-left: 1px solid rgba(61, 150, 232, 0.12)
+    background: #0e0c14
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.7), -1px 0 0 rgba(61, 150, 232, 0.08)
+
+  .console-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 18px 20px 12px
+
+  .console-title
+    color: var(--text-highlight-color)
+    font-size: 1.1em
+    font-weight: 600
+    font-family: 'Outfit', sans-serif
+
+    i
+      margin-right: 8px
+      color: #3d96e8
+
+  .console-close
+    padding: 4px 8px
+    color: var(--card-meta)
+    cursor: pointer
+    transition: color .25s
+
+    &:hover
+      color: #e8a0c0
+
+  .console-body
+    flex: 1
+    overflow-y: auto
+    padding: 4px 20px 24px
+
+  .console-group
+    margin-bottom: 18px
+    padding-bottom: 16px
+    border-bottom: 1px dashed rgba(61, 150, 232, 0.12)
+
+    &:last-child
+      border-bottom: none
+
+  .console-group-title
+    margin-bottom: 10px
+    color: var(--card-meta)
+    font-size: .85em
+    letter-spacing: .08em
+    text-transform: uppercase
+
+  .console-btn-group
+    display: flex
+    gap: 8px
+
+  .console-btn
+    flex: 1
+    padding: 7px 0
+    border: 1px solid rgba(61, 150, 232, 0.2)
+    border-radius: 10px
+    background: transparent
+    color: var(--font-color)
+    font-size: .88em
+    cursor: pointer
+    transition: all .25s
+
+    &:hover
+      border-color: #3d96e8
+      color: #3d96e8
+      background: rgba(61, 150, 232, 0.06)
+
+    &.is-active
+      border-color: #3d96e8
+      background: rgba(61, 150, 232, 0.14)
+      color: #c8b8e8
+
+  .console-switch
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 8px 0
+    color: var(--font-color)
+    font-size: .9em
+    cursor: pointer
+
+    i
+      position: relative
+      width: 36px
+      height: 20px
+      border-radius: 20px
+      background: rgba(61, 150, 232, 0.2)
+      transition: background .25s
+
+      &::after
+        position: absolute
+        top: 2px
+        left: 2px
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        background: #7a7898
+        content: ''
+        transition: transform .25s, background .25s
+
+    &.is-active i
+      background: #1e6bc4
+
+      &::after
+        transform: translateX(16px)
+        background: #e8e4f0
+
+  .console-about
+    margin: 0
+    padding: 0
+    list-style: none
+
+    li
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 5px 0
+      color: var(--card-meta)
+      font-size: .85em
+
+      span:last-child
+        color: var(--font-color)
+
+// ---------- 12. FPS chip --------------------------------------------
+
+#fps-box
+  position: fixed
+  bottom: 14px
+  left: 14px
+  z-index: 90
+  display: flex
+  gap: 6px
+  padding: 4px 10px
+  border: 1px solid rgba(80, 160, 240, 0.2)
+  border-radius: 8px
+  background: rgba(28, 26, 46, 0.85)
+  backdrop-filter: blur(10px)
+  box-shadow: var(--card-box-shadow)
+  color: var(--card-meta)
+  font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Courier New', monospace
+  font-size: 12px
+  line-height: 1.6
+  pointer-events: none
+
+  .fps-text
+    min-width: 2ch
+    color: #5cb8ff
+
+  @media (max-width: 768px)
+    display: none !important
+
+// ---------- 13. Footer -----------------------------------------------
+
+#footer
+  background-color: #0a1220
+  border-top: 1px solid rgba(80, 160, 240, 0.14)
+
+  &:before
+    display: none
+
+  .footer-other
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    gap: 8px 16px
+    padding: 18px 24px
+    max-width: 1200px
+    margin: 0 auto
+    text-align: left
+
+    .footer-copyright
+      text-align: left
+      color: var(--card-meta)
+      font-size: 0.82em
+
+    @media (max-width: 768px)
+      justify-content: center
+      text-align: center
+
+      .footer-copyright
+        text-align: center
+
+#count-time
+  color: #8ab8d8
+  font-family: 'Fira Code', Consolas, Menlo, Monaco, 'Courier New', monospace
+  font-size: .85em
+  white-space: nowrap
+
+  b
+    color: #5cb8ff
+    font-weight: 600
+
+// ---------- 14. Post / article page ---------------------------------
+
+#post
+  .post-title
+    font-family: 'Outfit', sans-serif
+    font-weight: 500
+    color: #e8e4f0
+    letter-spacing: 0.02em
+
+  #article-container
+    font-family: 'Inter', sans-serif
+    line-height: 1.8
+    color: var(--font-color)
+
+  // Headings
+  #article-container h1,
+  #article-container h2,
+  #article-container h3,
+  #article-container h4
+    font-family: 'Outfit', sans-serif
+    font-weight: 600
+    color: #e8e4f0
+    border-bottom: none
+
+  #article-container h2
+    border-left: 3px solid #1e6bc4
+    padding-left: 12px
+    margin-left: -15px
+
+  // Blockquotes
+  #article-container blockquote
+    border-left: 3px solid #1e6bc4
+    background: rgba(30, 107, 196, 0.06)
+    color: rgba(200, 184, 232, 0.8)
+    border-radius: 0 8px 8px 0
+    padding: 12px 16px
+    font-style: italic
+
+  // Inline code
+  #article-container code:not([class])
+    background: rgba(61, 150, 232, 0.1)
+    color: #e8c8a0
+    border: 1px solid rgba(61, 150, 232, 0.15)
+    border-radius: 4px
+    padding: 1px 6px
+    font-family: 'Fira Code', Consolas, monospace
+    font-size: 0.87em
+
+  // Links
+  #article-container a
+    color: #b8a0e0
+    text-decoration-color: rgba(61, 150, 232, 0.3)
+    transition: color 0.2s, text-decoration-color 0.2s
+
+    &:hover
+      color: #c8b8e8
+      text-decoration-color: rgba(200, 184, 232, 0.6)
+
+// ---------- 15. Code block (highlight) ------------------------------
+
+figure.highlight
+  background: #0a0914
+  border: 1px solid rgba(61, 150, 232, 0.1)
+  border-radius: 12px
+  overflow: hidden
+
+  .highlight-tools
+    background: #0a1220
+    border-bottom: 1px solid rgba(61, 150, 232, 0.08)
+
+  .code-lang
+    color: #3d96e8
+    font-size: 0.78em
+
+  // Scrollbar in code blocks
+  pre
+    &::-webkit-scrollbar
+      height: 4px
+
+    &::-webkit-scrollbar-track
+      background: transparent
+
+    &::-webkit-scrollbar-thumb
+      background: rgba(61, 150, 232, 0.25)
+      border-radius: 4px
+
+// ---------- 16. TOC (table of contents) ----------------------------
+
+#toc-div
+  .toc-content
+    .toc-link
+      color: var(--card-meta)
+      transition: color 0.2s, border-color 0.2s
+
+      &.active-class
+        color: #3d96e8
+        border-left-color: #3d96e8
+
+      &:hover
+        color: #c8b8e8
+
+// ---------- 17. Tags page ------------------------------------------
+
+#tag-cloud-list a
+  border: 1px solid rgba(61, 150, 232, 0.15)
+  background: var(--card-bg)
+  color: var(--font-color)
+  border-radius: 999px
+  padding: 4px 14px
+  transition: all 0.25s
+
+  &:hover
+    border-color: #3d96e8
+    color: #3d96e8
+    background: rgba(61, 150, 232, 0.08)
+
+// ---------- 18. Scrollbar ------------------------------------------
+
+::-webkit-scrollbar
+  width: 6px
+
+::-webkit-scrollbar-track
+  background: transparent
+
+::-webkit-scrollbar-thumb
+  background: rgba(61, 150, 232, 0.2)
+  border-radius: 6px
+
+  &:hover
+    background: rgba(61, 150, 232, 0.4)
+
+// ---------- 19. Pagination -----------------------------------------
+
+#pagination
+  .pagination-button
+    border: 1px solid rgba(61, 150, 232, 0.2)
+    background: var(--card-bg)
+    color: var(--font-color)
+    border-radius: 999px
+    transition: all 0.25s
+
+    &:hover
+      border-color: #3d96e8
+      color: #3d96e8
+      background: rgba(61, 150, 232, 0.08)
+
+// ---------- 20. Runtime toggles driven by the control center -------
+
+@media (min-width: 900px)
+  html.aside-left
+    .layout > div:first-child
+      order: 2
+
+    #aside-content
+      padding-left: 0
+      padding-right: 15px
+
+html.font-large
+  --global-font-size: 16.5px
+
+html.hide-fps
+  #fps-box
+    display: none
+
+html.hide-scroll-percent
+  #go-up .scroll-percent
+    display: none
+
+// ---------- 21. Smooth corners (Houdini paint worklet) ------------
+
+#console .console-mainbox
+  border-radius: 30px
+  mask-image: paint(smooth-corners)
+  -webkit-mask-image: paint(smooth-corners)
+  --smooth-level: 30
+
+#fps-box
+  mask-image: paint(smooth-corners)
+  -webkit-mask-image: paint(smooth-corners)
+  --smooth-level: 8
+
+figure.highlight
+  mask-image: paint(smooth-corners)
+  -webkit-mask-image: paint(smooth-corners)
+  --smooth-level: 14
+
+// ---------- 22. Micro-animations -----------------------------------
+
+// Fade-in cards on load
+@keyframes void-rise
+  from
+    opacity: 0
+    transform: translateY(14px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.card-widget,
+.recent-post-item
+  animation: void-rise 0.5s ease both
+
+// Stagger post cards
+.recent-post-item:nth-child(1) { animation-delay: 0.05s }
+.recent-post-item:nth-child(2) { animation-delay: 0.12s }
+.recent-post-item:nth-child(3) { animation-delay: 0.19s }
+.recent-post-item:nth-child(4) { animation-delay: 0.26s }
+.recent-post-item:nth-child(5) { animation-delay: 0.33s }
+
+// Sidebar cards stagger
+.card-widget:nth-child(1) { animation-delay: 0.08s }
+.card-widget:nth-child(2) { animation-delay: 0.16s }
+.card-widget:nth-child(3) { animation-delay: 0.24s }
+.card-widget:nth-child(4) { animation-delay: 0.32s }
+.card-widget:nth-child(5) { animation-delay: 0.40s }
+
+// ---------- 23. Selection highlight --------------------------------
+
+::selection
+  background: rgba(30, 107, 196, 0.4)
+  color: #e8e4f0
+
+::-moz-selection
+  background: rgba(30, 107, 196, 0.4)
+  color: #e8e4f0
+
+// ---------- 24. Mobile tweaks --------------------------------------
+
+@media (max-width: 768px)
+  #site-title
+    font-size: 2rem
+    letter-spacing: 0.08em
+
+  .card-widget,
+  .recent-post-item
+    border-radius: 12px
+
+// ---------- 25. Avatar glow in sidebar author card -----------------
+
+.avatar-img img,
+#aside-content .author-avatar img
+  border-radius: 50%
+  border: 2px solid rgba(61, 150, 232, 0.3)
+  box-shadow: 0 0 25px rgba(61, 150, 232, 0.2)
+  transition: box-shadow 0.4s, border-color 0.4s
+
+.avatar-img:hover img,
+#aside-content .author-avatar:hover img
+  box-shadow: 0 0 45px rgba(61, 150, 232, 0.45)
+  border-color: rgba(200, 184, 232, 0.7)
+
+// ---------- 26. Live2D widget ---------------------------------------
+
+// waifu.css is injected at runtime, i.e. after custom.css, so these rules
+// need higher specificity than #waifu / #live2d to win.
+html body #waifu
+  left: auto
+  right: 0
+  z-index: 95
+
+html body #waifu #live2d
+  width: 260px
+  height: 260px
+
+// No speech bubble and no toolbar: everything is disabled in
+// /live2d/waifu-tips.json and autoload.js, the nodes are removed too.
+html body #waifu #waifu-tips,
+html body #waifu #waifu-tool
+  display: none
+
+@media (max-width: 768px)
+  html body #waifu
+    #live2d
+      width: 200px
+      height: 200px
+
+// ---------- 27. About page -------------------------------------------
+
+#page #article-container
+  .ah
+    display: flex
+    align-items: center
+    gap: 26px
+    padding: 34px 32px
+    border: 1px solid rgba(61, 150, 232, 0.14)
+    border-radius: 16px
+    background: linear-gradient(135deg, var(--card-bg), rgba(61, 150, 232, 0.05))
+    box-shadow: var(--card-box-shadow)
+
+    .ah-avatar
+      flex: 0 0 auto
+
+      img
+        width: 104px
+        height: 104px
+        object-fit: cover
+        border-radius: 50%
+        border: 2px solid rgba(61, 150, 232, 0.45)
+        box-shadow: 0 0 34px rgba(61, 150, 232, 0.35)
+
+    .ah-id
+      min-width: 0
+
+    .ah-name
+      font-family: 'TheWitches', 'Outfit', sans-serif
+      font-size: clamp(2rem, 5vw, 2.9rem)
+      font-weight: normal
+      letter-spacing: 0.1em
+      line-height: 1.1
+      color: #eaf4ff
+      text-shadow: 0 0 34px rgba(100, 180, 255, 0.45)
+
+    .ah-tag
+      margin-top: 8px
+      font-family: 'Inter', sans-serif
+      font-size: 0.76rem
+      letter-spacing: 0.22em
+      text-transform: uppercase
+      color: var(--card-meta)
+
+    .ah-links
+      display: flex
+      flex-wrap: wrap
+      gap: 10px
+      margin-top: 18px
+
+      a,
+      .ah-discord
+        display: inline-flex
+        align-items: center
+        gap: 8px
+        padding: 7px 14px
+        font-family: 'Inter', sans-serif
+        font-size: 0.82rem
+        color: var(--font-color)
+        text-decoration: none
+        border: 1px solid rgba(61, 150, 232, 0.25)
+        border-radius: 999px
+        background: rgba(61, 150, 232, 0.08)
+        transition: color 0.2s, border-color 0.2s, background 0.2s, box-shadow 0.2s
+
+      a:hover
+        color: #eaf4ff
+        border-color: rgba(61, 150, 232, 0.65)
+        background: rgba(61, 150, 232, 0.2)
+        box-shadow: 0 0 18px rgba(61, 150, 232, 0.3)
+
+      .ah-discord
+        color: var(--card-meta)
+        cursor: default
+
+  .ah-focus
+    margin-top: 30px
+
+    .ah-h
+      font-family: 'TheWitches', 'Outfit', sans-serif
+      font-size: 1.7rem
+      font-weight: normal
+      letter-spacing: 0.08em
+      color: #e8e4f0
+      border-bottom: none
+      padding-bottom: 0
+
+    .ah-grid
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 16px
+      margin-top: 6px
+
+    .ah-tile
+      padding: 20px 20px 22px
+      border: 1px solid rgba(61, 150, 232, 0.12)
+      border-radius: 12px
+      background: var(--card-bg)
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s
+
+      i
+        font-size: 1.15rem
+        color: #3d96e8
+        text-shadow: 0 0 16px rgba(61, 150, 232, 0.6)
+
+      h3
+        margin: 10px 0 6px
+        font-family: 'Outfit', sans-serif
+        font-size: 1.05rem
+        font-weight: 600
+        letter-spacing: 0.03em
+        color: #e8e4f0
+        border-bottom: none
+
+      p
+        margin: 0
+        font-family: 'Inter', sans-serif
+        font-size: 0.9rem
+        line-height: 1.7
+        color: var(--light-grey)
+
+      &:hover
+        transform: translateY(-3px)
+        border-color: rgba(61, 150, 232, 0.4)
+        box-shadow: var(--void-glow)
+
+    .ah-note
+      margin-top: 20px
+      padding: 10px 16px
+      font-family: 'Inter', sans-serif
+      font-style: italic
+      font-size: 0.92rem
+      color: rgba(200, 184, 232, 0.75)
+      border-left: 3px solid #1e6bc4
+      background: rgba(30, 107, 196, 0.06)
+      border-radius: 0 8px 8px 0
+
+@media (max-width: 768px)
+  #page #article-container
+    .ah
+      flex-direction: column
+      text-align: center
+      padding: 26px 20px
+
+      .ah-links
+        justify-content: center
+
+    .ah-focus .ah-grid
+      grid-template-columns: 1fr
+

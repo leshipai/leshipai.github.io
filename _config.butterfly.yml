@@ -1,0 +1,207 @@
+# ---------------------------------------------------------------
+# Butterfly overrides for this site.
+# Hexo deep-merges this file over themes/butterfly/_config.yml,
+# so only non-default values belong here.
+# ---------------------------------------------------------------
+
+# ---- Global look -------------------------------------------------
+display_mode: dark
+
+# Accent palette — void aesthetic: silver-lavender on jet black
+theme_color:
+  enable: true
+  main: '#3d96e8'
+  paginator: '#3d96e8'
+  button_hover: '#89c4ff'
+  text_selection: '#1e6bc4'
+  link_color: '#6ab4f0'
+  hr_color: '#0e2240'
+  toc_color: '#3d96e8'
+  scrollbar_color: '#0e2240'
+  blockquote_padding_color: '#1e6bc4'
+  blockquote_background_color: 'rgba(30,107,196,0.08)'
+  code_foreground: '#e8c8a0'
+  meta_color: '#7a7898'
+  meta_theme_color_light: '#ffffff'
+  meta_theme_color_dark: '#0e1622'
+
+font:
+  font_family: "'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+  code_font_family: "'Fira Code', 'JetBrains Mono', Consolas, Menlo, Monaco, 'Courier New', monospace"
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+  start:
+  end:
+
+preloader:
+  enable: true
+  source: 2
+  pace_css_url:
+
+index_layout: 3
+
+index_post_content:
+  method: 3
+  length: 500
+
+rightside_scroll_percent: true
+rightside_config_animation: true
+
+# ---- Navigation --------------------------------------------------
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: false
+
+menu:
+  Home: / || fas fa-home
+  Categories: /categories/ || fas fa-folder-open
+  Tags: /tags/ || fas fa-tags
+  Archives: /archives/ || fas fa-archive
+  About: /about/ || fas fa-user
+
+# ---- Homepage cover banner (the avatar image as banner) ----------
+index_img: /images/banner.png
+default_top_img: /images/banner.png
+background: /images/banner.png
+
+# ---- Avatar ------------------------------------------------------
+avatar:
+  img: /images/avatar.png
+  effect: false
+
+# ---- Homepage subtitle (typed.js) -------------------------------
+subtitle:
+  enable: true
+  effect: true
+  typed_option:
+  source: false
+  sub:
+    - J'adore les chats
+    - Author might be Larping
+
+# ---- Search: disabled (no search button, no search assets) ------
+search:
+  use:
+
+# ---- Comments: disabled -----------------------------------------
+comments:
+  use:
+
+# ---- Footer ------------------------------------------------------
+footer:
+  nav:
+  owner:
+    enable: true
+    since: 2026
+  copyright:
+    enable: true
+    version: false
+  custom_text:
+  site_start: '2026-10-07T00:00:00+03:00'
+
+# ---- Sidebar -----------------------------------------------------
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: Security Research and Osint.
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/leshipai
+  card_announcement:
+    enable: true
+    content: Welcome to My Blog
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+  card_newest_comments:
+    enable: false
+    sort_order:
+    limit: 6
+    storage: 10
+    avatar: true
+  card_categories:
+    enable: true
+    limit: 0
+    expand: none
+    sort_order:
+  card_tags:
+    enable: true
+    limit: 40
+    color: false
+    custom_colors:
+    orderby: random
+    order: 1
+    sort_order:
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 12
+    sort_order:
+  card_post_series:
+    enable: true
+    series_title: false
+    orderBy: 'date'
+    order: -1
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: false
+    sort_order:
+    runtime_date:
+
+# ---- No external counting services ------------------------------
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+
+wordcount:
+  enable: false
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# ---- Share: X only ------------------------------------------------
+share:
+  use: sharejs
+  sharejs:
+    sites: x
+
+# ---- Custom assets ----------------------------------------------
+inject:
+  head:
+    - <link rel="preconnect" href="https://fonts.googleapis.com">
+    - <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    - <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    - <link rel="stylesheet" href="/css/custom.css">
+    - >-
+      <script>(function(){try{var p=JSON.parse(localStorage.getItem('bc_prefs')||'{}');if(!p||typeof p!=='object')return;var d=document.documentElement;if(p.aside==='left')d.classList.add('aside-left');if(p.font==='large')d.classList.add('font-large');if(p.fps===false)d.classList.add('hide-fps');if(p.scroll===false)d.classList.add('hide-scroll-percent');}catch(e){}})();</script>
+  bottom:
+    - <script src="/js/custom/smooth-corners.js"></script>
+    - <script src="/js/custom/aside-cards.js"></script>
+    - <script src="/js/custom/category-bar.js"></script>
+    - <script src="/js/custom/runtime.js"></script>
+    - <script src="/js/custom/console.js"></script>
+    # Live2D widget (self-hosted copy of dist/ from the local live2d-widget
+    # repo). Loads waifu.css + waifu-tips.js at runtime, see /live2d/.
+    - <script src="/live2d/autoload.js"></script>

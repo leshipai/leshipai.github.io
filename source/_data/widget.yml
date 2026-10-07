@@ -1,0 +1,64 @@
+top:
+  - name: Calendar
+    icon: far fa-calendar-alt
+    id_name: card-widget-calendar
+    class_name: card-times
+    html: |
+      <div id="calendar-area-left">
+        <div id="calendar-week"></div>
+        <div id="calendar-date"></div>
+        <div id="calendar-solar"></div>
+        <div id="calendar-month"></div>
+      </div>
+      <div id="calendar-area-right">
+        <div id="calendar-main">
+          <div class="calendar-rh">
+            <div class="calendar-d0"><a>Su</a></div>
+            <div class="calendar-d1"><a>Mo</a></div>
+            <div class="calendar-d2"><a>Tu</a></div>
+            <div class="calendar-d3"><a>We</a></div>
+            <div class="calendar-d4"><a>Th</a></div>
+            <div class="calendar-d5"><a>Fr</a></div>
+            <div class="calendar-d6"><a>Sa</a></div>
+          </div>
+        </div>
+      </div>
+
+  - name: Countdown
+    icon: fas fa-calendar-day
+    id_name: card-widget-schedule
+    class_name: card-times
+    html: |
+      <div id="schedule-area-left">
+        <div id="schedule-title"></div>
+        <div id="schedule-days"></div>
+        <div id="schedule-date"></div>
+      </div>
+      <div id="schedule-area-right">
+        <div class="schedule-r0">
+          <div class="schedule-d0">Year</div>
+          <div class="schedule-d1">
+            <span id="p_span_year" class="aside-span1"></span>
+            <span id="p_spanpct_year" class="aside-span2"></span>
+            <progress id="pBar_year" max="365" value="0"></progress>
+          </div>
+        </div>
+        <div class="schedule-r1">
+          <div class="schedule-d0">Month</div>
+          <div class="schedule-d1">
+            <span id="p_span_month" class="aside-span1"></span>
+            <span id="p_spanpct_month" class="aside-span2"></span>
+            <progress id="pBar_month" max="31" value="0"></progress>
+          </div>
+        </div>
+        <div class="schedule-r2">
+          <div class="schedule-d0">Week</div>
+          <div class="schedule-d1">
+            <span id="p_span_week" class="aside-span1"></span>
+            <span id="p_spanpct_week" class="aside-span2"></span>
+            <progress id="pBar_week" max="7" value="0"></progress>
+          </div>
+        </div>
+      </div>
+
+bottom: []
