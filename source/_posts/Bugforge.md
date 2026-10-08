@@ -8,7 +8,7 @@ tags:
 cover: /images/avatar.png
 ---
 
-In the following writeup , I try to tackle and document the Broken Access Control tagged labs from BugForge.io named Galaxy-Dash-006
+In the following writeup , I try to tackle and document the lsb  from BugForge.io named Galaxy-Dash-006. A Broken Access Control Lab. 
 
 <!-- more -->
 
