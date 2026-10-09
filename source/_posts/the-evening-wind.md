@@ -2,10 +2,10 @@
 title: The evening wind
 date: 2026-08-05 20:15:00
 categories:
-  - [Essays]
+  - - Essays
 tags:
   - prose
-cover: /images/avatar.png
+cover: /images/three.jpg
 ---
 
 The evening wind takes its time with the shirt on the balcony line, as if it were counting the things I have not finished.

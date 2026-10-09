@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/the-evening-wind.md",
+                "file": "source/_posts/Lidl.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the-evening-wind"
+              "title": "Lidl"
             }
           }
         ]
@@ -191,10 +191,13 @@
   "active": "5a589fb47d75958d",
   "lastOpenFiles": [
     "source/_posts/september-2026-notes.md",
+    "source/_posts/the-evening-wind.md",
+    "source/_posts/Auth_User_Enum.md",
+    "source/images/three.jpg",
+    "source/images/rize.jpg",
+    "source/images/one.jpg",
     "source/_posts/Lidl.md",
     "source/_posts/hexo-butterfly-setup-1.md",
-    "source/_posts/Bugforge.md",
-    "source/_posts/Auth_User_Enum.md",
-    "source/_posts/the-evening-wind.md"
+    "source/_posts/Bugforge.md"
   ]
 }

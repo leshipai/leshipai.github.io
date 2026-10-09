@@ -5,7 +5,7 @@ categories:
   - - Writeups
 tags:
   - Web
-cover: /images/avatar.png
+cover: /images/rize.jpg
 ---
 
 This post kicks off a series documenting my walkthroughs of the PortSwigger Web Security Academy labs. Herein, I’m revisiting the Authentication module.
