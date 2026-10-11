@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9793a3d36c52df52",
+        "id": "29ad565c3a86e27c",
         "type": "tabs",
         "children": [
           {
-            "id": "5a589fb47d75958d",
+            "id": "1ab7e89a9fcdf261",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Lidl.md",
+                "file": "source/_posts/Auth_MFA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lidl"
+              "title": "Auth_MFA"
             }
           }
         ]
@@ -188,15 +188,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "5a589fb47d75958d",
+  "active": "1ab7e89a9fcdf261",
   "lastOpenFiles": [
-    "source/_posts/september-2026-notes.md",
-    "source/_posts/the-evening-wind.md",
     "source/_posts/Auth_User_Enum.md",
+    "source/_posts/Lidl.md",
+    "source/_posts/Auth_MFA.md",
+    "source/images/2FA_broken_logic.png",
+    "source/images/2FA_simple_bypass.png",
+    "source/_posts/NickHunt.md",
+    "file:/home/cat/x-followers/README.md",
+    "source/_posts/NickHunt/following.png",
+    "source/_posts/NickHunt/FakeNick_Hunt.png",
+    "source/_posts/NickHunt/FirstTweet.png",
+    "source/_posts/NickHunt/SecondTweet.png",
+    "source/_posts/NickHunt/snapshot.png",
+    "source/_posts/NickHunt/MastodonAcc.png",
+    "source/_posts/NickHunt",
+    "source/_posts/the-evening-wind.md",
+    "Untitled.md",
+    "source/_posts/september-2026-notes.md",
     "source/images/three.jpg",
     "source/images/rize.jpg",
-    "source/images/one.jpg",
-    "source/_posts/Lidl.md",
     "source/_posts/hexo-butterfly-setup-1.md",
     "source/_posts/Bugforge.md"
   ]
