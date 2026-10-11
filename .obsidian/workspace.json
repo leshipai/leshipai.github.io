@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Auth_Others.md",
+                "file": "source/_posts/Auth_MFA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Auth_Others"
+              "title": "Auth_MFA"
             }
           }
         ]
@@ -188,12 +188,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "4b398107bd984e4d",
+  "active": "17fc232f8584016a",
   "lastOpenFiles": [
+    "source/_posts/Auth_Others.md",
     "source/images/pass_reset.png",
     "source/images/stay_logged_in.png",
     "source/images/payload_processing.png",
-    "source/_posts/Auth_Others.md",
     "source/_posts/Auth_MFA.md",
     "source/_posts/NickHunt.md",
     "source/_posts/the-evening-wind.md",
@@ -210,7 +210,6 @@
     "source/_posts/NickHunt/FirstTweet.png",
     "source/_posts/NickHunt/SecondTweet.png",
     "source/_posts/NickHunt/snapshot.png",
-    "source/_posts/NickHunt/MastodonAcc.png",
     "source/_posts/NickHunt",
     "Untitled.md"
   ]
