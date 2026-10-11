@@ -5,6 +5,7 @@ categories:
   - - Writeups
 tags:
   - osint
+  - CTF
 cover: /images/rize.jpg
 ---
 

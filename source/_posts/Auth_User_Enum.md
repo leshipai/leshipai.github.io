@@ -5,6 +5,7 @@ categories:
   - - Writeups
 tags:
   - Web
+  - Portswigger
 cover: /images/rize.jpg
 ---
 

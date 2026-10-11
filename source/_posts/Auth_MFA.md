@@ -5,6 +5,7 @@ categories:
   - - Writeups
 tags:
   - Web
+  - Portswigger
 cover: /images/rize.jpg
 ---
 
@@ -14,7 +15,7 @@ Tackling the Multi Factor Auth Labs from Portswigger
 
 ---
 
-```yaml
+```http
 If the user is first prompted to enter a password, and then prompted to enter a verification code on a separate page, the user is effectively in a "logged in" state before they have entered the verification code. In this case, it is worth testing to see if you can directly skip to "logged-in only" pages after completing the first authentication step.Some sites don't check to see if the MFA stage was verified successfully
 ```
 
