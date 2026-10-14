@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0460f13e71b08b66",
+        "id": "730f9a328355a22a",
         "type": "tabs",
         "children": [
           {
-            "id": "39b7e7a3cd8c8a59",
+            "id": "f6f50ac7c1ba051c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Auth_Others.md",
+                "file": "source/_posts/Access Control.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Auth_Others"
+              "title": "Access Control"
             }
           }
         ]
@@ -188,22 +188,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "39b7e7a3cd8c8a59",
+  "active": "4b398107bd984e4d",
   "lastOpenFiles": [
+    "source/images/roleid_2.png",
+    "source/images/here_is_the_cookie.png",
+    "source/images/change_cookie_value.png",
+    "source/_posts/Access Control.md",
+    "source/images/admin_cookie.png",
+    "source/images/solve_unpredictable_path.png",
+    "source/images/view_source.png",
+    "source/images/admin_path.png",
+    "source/images/robots_txt.png",
     "source/_posts/Auth_MFA.md",
     "source/_posts/Auth_Others.md",
     "source/images/offline_pass_crack.png",
     "source/images/alert.png",
     "source/_posts/Auth_User_Enum.md",
     "source/images/pass_change_func.png",
-    "source/images/pass_change_brute.png",
-    "Pasted image 20261014043028.png",
-    "Pasted image 20261014042710.png",
     "Untitled.md",
-    "source/images/Reset_poisoning.png",
-    "source/images/access_log.png",
-    "source/images/email_check.png",
-    "source/images/wiener_login.png",
     "file:/home/cat/Projects/snag/README.md",
     "file:/home/cat/x-followers/HOW_IT_WORKS.md",
     "source/_posts/NickHunt.md",
