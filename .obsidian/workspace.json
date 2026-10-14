@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "14a536c016478006",
+        "id": "0460f13e71b08b66",
         "type": "tabs",
         "children": [
           {
-            "id": "17fc232f8584016a",
+            "id": "39b7e7a3cd8c8a59",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -188,29 +188,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "17fc232f8584016a",
+  "active": "39b7e7a3cd8c8a59",
   "lastOpenFiles": [
+    "source/_posts/Auth_User_Enum.md",
     "source/_posts/Auth_Others.md",
+    "source/images/pass_change_func.png",
+    "source/images/pass_change_brute.png",
+    "Pasted image 20261014043028.png",
+    "Pasted image 20261014042710.png",
+    "Untitled.md",
+    "source/images/Reset_poisoning.png",
+    "source/images/access_log.png",
+    "source/images/email_check.png",
+    "source/images/wiener_login.png",
+    "file:/home/cat/Projects/snag/README.md",
+    "file:/home/cat/x-followers/HOW_IT_WORKS.md",
     "source/images/pass_reset.png",
     "source/images/stay_logged_in.png",
-    "source/images/payload_processing.png",
     "source/_posts/Auth_MFA.md",
     "source/_posts/NickHunt.md",
     "source/_posts/the-evening-wind.md",
     "source/_posts/september-2026-notes.md",
     "source/_posts/Lidl.md",
     "source/_posts/Bugforge.md",
-    "source/_posts/Auth_User_Enum.md",
     "source/_posts/hexo-butterfly-setup-1.md",
-    "source/images/2FA_broken_logic.png",
-    "source/images/2FA_simple_bypass.png",
     "file:/home/cat/x-followers/README.md",
-    "source/_posts/NickHunt/following.png",
-    "source/_posts/NickHunt/FakeNick_Hunt.png",
-    "source/_posts/NickHunt/FirstTweet.png",
-    "source/_posts/NickHunt/SecondTweet.png",
-    "source/_posts/NickHunt/snapshot.png",
-    "source/_posts/NickHunt",
-    "Untitled.md"
+    "source/_posts/NickHunt"
   ]
 }
