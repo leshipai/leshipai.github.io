@@ -7,23 +7,23 @@
 # ---- Global look -------------------------------------------------
 display_mode: dark
 
-# Accent palette — void aesthetic: silver-lavender on jet black
+# Accent palette — "midnight aurora": aqua + periwinkle on deep ink
 theme_color:
   enable: true
-  main: '#3d96e8'
-  paginator: '#3d96e8'
-  button_hover: '#89c4ff'
-  text_selection: '#1e6bc4'
-  link_color: '#6ab4f0'
-  hr_color: '#2a2a2a'
-  toc_color: '#3d96e8'
-  scrollbar_color: '#444444'
-  blockquote_padding_color: '#1e6bc4'
-  blockquote_background_color: 'rgba(30,107,196,0.08)'
-  code_foreground: '#e8c8a0'
-  meta_color: '#7a7898'
+  main: '#58e1d2'
+  paginator: '#58e1d2'
+  button_hover: '#8e86ff'
+  text_selection: '#2fae9f'
+  link_color: '#9f9aff'
+  hr_color: '#1a2430'
+  toc_color: '#58e1d2'
+  scrollbar_color: '#33445c'
+  blockquote_padding_color: '#58e1d2'
+  blockquote_background_color: 'rgba(88,225,210,0.08)'
+  code_foreground: '#f7be8a'
+  meta_color: '#7e93b0'
   meta_theme_color_light: '#ffffff'
-  meta_theme_color_dark: '#080808'
+  meta_theme_color_dark: '#0a0e14'
 
 font:
   font_family: "'Inter', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
