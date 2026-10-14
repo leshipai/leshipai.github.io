@@ -1,5 +1,5 @@
 ---
-title: Portswigger BAC Labs
+title: Portswigger BAC Labs 1
 date: 2026-10-14
 categories:
   - - Writeups
@@ -77,3 +77,76 @@ Content-Type: text/plain;charset=UTF-8
 ```
 
 ![](images/roleid_2.png)
+
+## Lab: User ID controlled by request parameter
+
+We have our test creds `wiener:peter` and we are supposed to obtain the API key for the user `carlos` and submit it as the solution.
+
+After logging in , there is an api key displayed in our account page.
+
+Now to try the first and easiest theory , changing the value of my-account query to `carlos` and replay the request:
+
+```http
+GET /my-account?id=carlos HTTP/2
+Host: 0aca0060036ec9958056e4b700150053.web-security-academy.net
+Cookie: session=9ovbNHPigKrY3FX2hQgrV4CSU2DFJHHp
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Referer: https://0aca0060036ec9958056e4b700150053.web-security-academy.net/login
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+Te: trailers
+
+
+```
+
+And just like that we are in:
+
+![](images/change_id.png)
+
+## Lab: User ID controlled by request parameter, with unpredictable user IDs
+
+We login using our test creds `wiener:peter` and immediately notice the url looking different from how it normally does : `https://0a9f00c404228be8827583cd00e2006e.web-security-academy.net/my-account?id=716cbeac-e93f-4678-9301-fb5783cd4c9d` 
+
+According to the lab description we need to find carlos' GUID and replacing our own GUID with his.
+
+Finding Carlos GUID -> Inspecting the blog and posts we notice the UserIDs of the authors are included in the post URl -> Now we just need to find carlos post ->Replace the GUID with our GUID in the account page ->Get the API key->solve the lab
+
+![](images/guid.png)
+
+## Lab: User ID controlled by request parameter with data leakage in redirect
+### Description
+
+>This lab contains an access control vulnerability where sensitive information is leaked in the body of a redirect response.
+To solve the lab, obtain the API key for the user `carlos` and submit it as the solution.
+You can log in to your own account using the following credentials: `wiener:peter`
+
+### Solve
+
+We login as normal using `wiener:peter` and are redirected to our account . In burp , we change the id in the query from `wiener` to `carlos`
+
+```http
+GET /my-account?id=carlos HTTP/2
+Host: 0a7d00b4034d5ffa83182d3b00ad00f1.web-security-academy.net
+Cookie: session=By2Ykc5lu8kCa1ZWpZp7X7qLwps2rsfJ
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+
+
+```
+
+Check the response , Although its  a 302 and we are are redirected to `/login`
+
+![](images/302.png)
+
+Checking the render side , we see that `carlos` API key is leaked in the body:
+
+![](images/api_key.png)
+
+Go ahead and submit the API key and solve the lab
