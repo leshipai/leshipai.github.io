@@ -6,7 +6,7 @@ categories:
 tags:
   - Web
   - Portswigger
-cover: /images/lain.jpeg
+cover: /images/lain1.jpeg
 ---
 
 This post kicks off a series documenting my walkthroughs of the PortSwigger Web Security Academy labs. Herein, I’m revisiting the Authentication module.
