@@ -6,7 +6,7 @@ categories:
 tags:
   - osint
   - CTF
-cover: /images/rize.jpg
+cover: /images/five.jpeg
 ---
 
 Hi , here I try to tackle Byte's challenge from Hackuten. A three-part SOCMINT challenge. This covers the first part. 

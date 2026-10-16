@@ -6,7 +6,7 @@ categories:
 tags:
   - Web
   - Portswigger
-cover: /images/rize.jpg
+cover: /images/lain1.jpeg
 ---
 
 Tackling the Access Control Labs from Portswigger

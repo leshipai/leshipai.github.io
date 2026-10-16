@@ -6,7 +6,7 @@ categories:
 tags:
   - Web
   - Portswigger
-cover: /images/rize.jpg
+cover: /images/lain3.jpeg
 ---
 
 Tackling the Multi Factor Auth Labs from Portswigger

@@ -6,7 +6,7 @@ categories:
 tags:
   - Web
   - "#Portswigger"
-cover: /images/rize.jpg
+cover: /images/lain4.jpeg
 ---
 
 Tackling Vulnerabilities in Other Auth Mechanisms Labs from Portswigger

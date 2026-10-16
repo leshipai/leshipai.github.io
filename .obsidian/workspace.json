@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Access Control 2.md",
+                "file": "source/_posts/Lidl.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Access Control 2"
+              "title": "Lidl"
             }
           }
         ]
@@ -190,29 +190,29 @@
   },
   "active": "ca16f26a08dc962b",
   "lastOpenFiles": [
-    "source/images/Unauth.png",
-    "source/_posts/Access Control 2.md",
-    "source/images/no_refferer.png",
-    "source/images/referrer.png",
-    "source/images/second_req.png",
-    "source/images/first_req.png",
-    "source/images/lab_solve.png",
-    "Pasted image 20261016111952.png",
-    "source/images/Missing_username.png",
-    "source/images/method_circumvent.png",
-    "source/images/Get_admin_roles.png",
-    "source/_posts/Access Control.md",
-    "source/_posts/Auth_MFA.md",
-    "source/_posts/Auth_Others.md",
+    "source/_posts/NickHunt.md",
+    "source/_posts/Bugforge.md",
     "source/_posts/Auth_User_Enum.md",
+    "source/_posts/Auth_Others.md",
+    "source/_posts/Auth_MFA.md",
+    "source/_posts/Access Control 2.md",
+    "source/_posts/Access Control.md",
+    "source/images/lain3.jpeg",
+    "source/images/mikey.jpeg",
+    "source/images/laine3.jpeg",
+    "source/images/lain6.jpeg",
+    "source/images/lain5.jpeg",
+    "source/images/lain4.jpeg",
+    "source/images/lain2.jpeg",
+    "source/images/lain1.jpeg",
+    "source/images/four.jpeg",
+    "source/images/five.jpeg",
+    "source/_posts/Lidl.md",
     "Untitled.md",
     "file:/home/cat/Projects/snag/README.md",
     "file:/home/cat/x-followers/HOW_IT_WORKS.md",
-    "source/_posts/NickHunt.md",
     "source/_posts/the-evening-wind.md",
     "source/_posts/september-2026-notes.md",
-    "source/_posts/Lidl.md",
-    "source/_posts/Bugforge.md",
     "source/_posts/hexo-butterfly-setup-1.md",
     "file:/home/cat/x-followers/README.md",
     "source/_posts/NickHunt"
