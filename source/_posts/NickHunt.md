@@ -4,8 +4,7 @@ date: 2026-10-09 18:43
 categories:
   - - Writeups
 tags:
-  - osint
-  - CTF
+  - OSINT
 cover: /images/five.jpeg
 ---
 

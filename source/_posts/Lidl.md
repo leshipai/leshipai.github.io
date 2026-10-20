@@ -5,8 +5,6 @@ categories:
   - - Writeups
 tags:
   - OSINT
-  - GeoINT
-  - CTF
   - Hacktoria
 cover: /images/one.jpg
 ---

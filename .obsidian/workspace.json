@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Lidl.md",
+                "file": "source/_posts/Business Logic 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lidl"
+              "title": "Business Logic 1"
             }
           }
         ]
@@ -190,24 +190,25 @@
   },
   "active": "ca16f26a08dc962b",
   "lastOpenFiles": [
-    "source/_posts/NickHunt.md",
-    "source/_posts/Bugforge.md",
-    "source/_posts/Auth_User_Enum.md",
-    "source/_posts/Auth_Others.md",
+    "source/images/16.png",
+    "source/images/15.png",
+    "source/images/14.png",
+    "source/_posts/Business Logic 1.md",
+    "source/images/12.png",
+    "source/images/13.png",
+    "source/images/delete_carlos.png",
+    "source/images/panel.png",
+    "source/images/401admin.png",
+    "source/images/reg.png",
+    "source/images/price_tamper.png",
     "source/_posts/Auth_MFA.md",
-    "source/_posts/Access Control 2.md",
+    "source/_posts/Auth_Others.md",
     "source/_posts/Access Control.md",
-    "source/images/lain3.jpeg",
-    "source/images/mikey.jpeg",
-    "source/images/laine3.jpeg",
-    "source/images/lain6.jpeg",
-    "source/images/lain5.jpeg",
-    "source/images/lain4.jpeg",
-    "source/images/lain2.jpeg",
-    "source/images/lain1.jpeg",
-    "source/images/four.jpeg",
-    "source/images/five.jpeg",
+    "source/_posts/Access Control 2.md",
+    "source/_posts/Auth_User_Enum.md",
+    "source/_posts/Bugforge.md",
     "source/_posts/Lidl.md",
+    "source/_posts/NickHunt.md",
     "Untitled.md",
     "file:/home/cat/Projects/snag/README.md",
     "file:/home/cat/x-followers/HOW_IT_WORKS.md",
