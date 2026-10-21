@@ -216,3 +216,43 @@ As it turns out , applying one coupon after another , allows you to use a coupon
 I don't Know how to explain it clearly . Refer [here](https://siunam321.github.io/ctf/portswigger-labs/Business-Logic-Vulnerabilities/blv-5/)
 
 
+## Lab: Inconsistent handling of exceptional input
+
+### Description
+
+>This lab doesn't adequately validate user input. You can exploit a logic flaw in its account registration process to gain access to administrative functionality. To solve the lab, access the admin panel and delete the user `carlos`.
+
+### Solve
+
+In the description , we are told that the logic flow exists in the registration flow. So that's what we'll be focusing on primarily.
+
+The flow goes as follows: 
+1. You input a username,password and an email address you own.
+2. A registration link with a temporary token is sent to your email address
+3. The Account is registered upon clicking said link and you can login
+
+Trying to access `/admin` with your created account gets you an error `Admin interface only available if logged in as a DontWannaCry user` . 
+
+Back at the registration page , there was a similar message `If you work for DontWannaCry, please use your @dontwannacry.com email address` . So it looks like the site reads the email address and looks for `@dontwannacry.com` and decides if one is admin based on that or not.
+
+Now comes the main issue , unlike a previous lab , there was no functionality to change our email address to `dontwannacry` email. We have to look for an alternative method.
+
+I hit a dead end and had no sight of what to do. So i got a [nudge](https://siunam321.github.io/ctf/portswigger-labs/Business-Logic-Vulnerabilities/blv-6/)  . Turns out the exceptional input(from the lab title) means an abnormally long email address.
+
+Another important thing is that the email client allows `Displaying all emails @exploit-0a0c00740377916584459987012b00f7.exploit-server.net and all subdomains` . That means we can append `@dontwannacry.com` and it will be treated as a subdomain of the email client address.
+
+Finding the perfect length was trial and error and I ended up with this as a perfect match , such that the email address showcased under my account ended cleanly in `@dontwannacry.com` 
+
+Email = `carlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlitocarlit@dontwannacry.com.exploit-0a6800ba046fe3f88007576b01e20030.exploit-server.net`
+
+Now lets try registering.
+
+![](images/33.png)
+
+And we are Admin as well:
+
+![](images/44.png)
+
+Lets delete carlos:
+
+![](images/55.png)
