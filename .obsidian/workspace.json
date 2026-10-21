@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Business Logic 1.md",
+                "file": "source/_posts/NickHunt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Business Logic 1"
+              "title": "NickHunt"
             }
           },
           {
@@ -216,26 +216,26 @@
   },
   "active": "ca16f26a08dc962b",
   "lastOpenFiles": [
+    "source/_posts/Lidl.md",
     "source/_posts/Business Logic 2.md",
     "source/_posts/Business Logic 1.md",
+    "source/_posts/Bugforge.md",
+    "source/_posts/Auth_User_Enum.md",
+    "source/_posts/Auth_Others.md",
+    "source/_posts/Auth_MFA.md",
+    "source/_posts/Access Control 2.md",
+    "source/_posts/Access Control.md",
+    "source/_posts/NickHunt.md",
+    "source/images/black_lips.jpg",
+    "source/images/angel.jpg",
     "source/images/44.png",
     "source/images/55.png",
     "source/images/33.png",
-    "source/_posts/Auth_User_Enum.md",
     "source/images/16.png",
     "source/images/15.png",
     "source/images/14.png",
     "source/images/12.png",
     "source/images/13.png",
-    "source/images/delete_carlos.png",
-    "source/images/panel.png",
-    "source/_posts/Auth_MFA.md",
-    "source/_posts/Auth_Others.md",
-    "source/_posts/Access Control.md",
-    "source/_posts/Access Control 2.md",
-    "source/_posts/Bugforge.md",
-    "source/_posts/Lidl.md",
-    "source/_posts/NickHunt.md",
     "Untitled.md",
     "file:/home/cat/Projects/snag/README.md",
     "file:/home/cat/x-followers/HOW_IT_WORKS.md",
