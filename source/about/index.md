@@ -8,7 +8,7 @@ type: about
   <div class="ah-avatar"><img src="/images/avatar.png" alt="Leshipai" onerror="this.onerror=null;this.src='/img/404.jpg'"></div>
   <div class="ah-id">
     <div class="ah-name">Leshipai</div>
-    <div class="ah-tag">security research &middot; osint &middot; random thoughts</div>
+    <div class="ah-tag">Web &middot; Osint &middot;</div>
     <div class="ah-links">
       <a href="https://github.com/leshipai" target="_blank" rel="noopener"><i class="fab fa-github"></i><span>github.com/leshipai</span></a>
       <span class="ah-discord" title="Discord"><i class="fab fa-discord"></i><span>@leshipai</span></span>

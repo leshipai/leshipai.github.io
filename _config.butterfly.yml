@@ -82,8 +82,7 @@ subtitle:
   typed_option:
   source: false
   sub:
-    - J'adore les chats
-    - Author might be Larping
+  ''
 
 # ---- Search: disabled (no search button, no search assets) ------
 search:
@@ -118,7 +117,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: Security Research and Osint.
+    description: Web and Osint
     button:
       enable: true
       icon: fab fa-github
