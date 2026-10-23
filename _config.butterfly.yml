@@ -82,7 +82,7 @@ subtitle:
   typed_option:
   source: false
   sub:
-  ''
+    - Web stuff and Osint stuff
 
 # ---- Search: disabled (no search button, no search assets) ------
 search:
@@ -117,7 +117,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: Web and Osint
+    description: Security Research and Osint.
     button:
       enable: true
       icon: fab fa-github
