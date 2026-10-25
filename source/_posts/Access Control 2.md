@@ -1,12 +1,12 @@
 ---
 title: Portswigger BAC Labs 2
-date: 2026-10-14
+date: 2026-10-15
 categories:
   - - Writeups
 tags:
   - Web
   - Portswigger
-cover: /images/lain1.jpeg
+cover: /images/rezebw.jpg
 ---
 
 Tackling the Access Control Labs from Portswigger
