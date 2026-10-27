@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Access Control 2.md",
+                "file": "source/_posts/Info Disclosure.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Access Control 2"
+              "title": "Info Disclosure"
             }
           }
         ]
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "fe88809705000623",
@@ -190,22 +191,24 @@
   },
   "active": "a78922787f28a7e0",
   "lastOpenFiles": [
-    "source/_posts/Access Control.md",
-    "source/_posts/Access Control 2.md",
-    "source/_posts/Business Logic 1.md",
+    "source/images/bgfdsbd.png",
+    "source/images/34534f.png",
+    "source/images/fdffdsfg.png",
+    "source/images/gfhnb33.png",
+    "source/images/trey5345.png",
+    "source/images/hhgrfhfn.png",
+    "source/images/ferggf.png",
+    "source/images/ghbgh.png",
+    "source/images/111111233s.png",
+    "source/images/223234.png",
     "source/_posts/Business Logic 2.md",
+    "source/_posts/Info Disclosure.md",
+    "source/_posts/Access Control 2.md",
+    "source/_posts/Access Control.md",
+    "source/_posts/Business Logic 1.md",
     "source/images/russted.jpeg",
-    "source/images/rezebw.jpg",
-    "source/images/22222.png",
-    "source/images/45rgrbv.png",
-    "source/images/ererr.png",
-    "source/images/2443.png",
-    "source/images/23445.png",
-    "source/images/23.png",
-    "source/images/55.png",
     "images/15.md",
     "images",
-    "source/images/1111.png",
     "source/_posts/NickHunt.md",
     "source/_posts/Lidl.md",
     "source/_posts/Bugforge.md",
