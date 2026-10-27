@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Access Control.md",
+                "file": "source/_posts/Path Traversal 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Access Control"
+              "title": "Path Traversal 1"
             }
           },
           {
@@ -67,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Lab",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -202,21 +202,25 @@
   },
   "active": "a78922787f28a7e0",
   "lastOpenFiles": [
-    "source/_posts/Access Control 2.md",
-    "source/_posts/Naval Intrusion.md",
-    "source/images/russted.jpeg",
-    "source/images/BDI.png",
-    "source/images/erfwdfdsf.png",
-    "source/images/ship-image-01.png",
+    "source/_posts/SSRF.md",
+    "source/_posts/File Upload.md",
+    "source/images/rwerwerwe.png",
+    "source/images/wergbge.png",
+    "source/images/efgefwge.png",
+    "source/images/wtgfbb.png",
+    "source/images/fdgrtewg.png",
+    "source/images/4fdvgfd.png",
+    "source/images/2324f.png",
     "source/_posts/Access Control.md",
+    "source/_posts/Auth_User_Enum.md",
+    "source/_posts/Access Control 2.md",
+    "source/_posts/Path Traversal 1.md",
+    "source/images/wete5yt5.png",
+    "source/images/wefwf.png",
+    "source/images/2dewfw.png",
+    "source/_posts/Naval Intrusion.md",
     "source/_posts/Auth_Others.md",
     "source/_posts/Info Disclosure.md",
-    "source/images/bgfdsbd.png",
-    "source/images/34534f.png",
-    "source/images/fdffdsfg.png",
-    "source/images/gfhnb33.png",
-    "source/images/trey5345.png",
-    "source/images/hhgrfhfn.png",
     "source/_posts/Business Logic 2.md",
     "source/_posts/Business Logic 1.md",
     "images/15.md",
@@ -224,7 +228,6 @@
     "source/_posts/NickHunt.md",
     "source/_posts/Lidl.md",
     "source/_posts/Bugforge.md",
-    "source/_posts/Auth_User_Enum.md",
     "source/_posts/Auth_MFA.md",
     "Untitled.md",
     "file:/home/cat/Projects/snag/README.md",
