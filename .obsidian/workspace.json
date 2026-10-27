@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/Naval Intrusion.md",
+                "file": "source/_posts/Access Control.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Naval Intrusion"
+              "title": "Access Control"
+            }
+          },
+          {
+            "id": "ec1a9317cfd9b707",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "source/images/russted.jpeg"
+              },
+              "icon": "lucide-image",
+              "title": "russted"
             }
           }
         ]
@@ -188,13 +200,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "4b398107bd984e4d",
+  "active": "a78922787f28a7e0",
   "lastOpenFiles": [
+    "source/_posts/Access Control 2.md",
+    "source/_posts/Naval Intrusion.md",
+    "source/images/russted.jpeg",
     "source/images/BDI.png",
     "source/images/erfwdfdsf.png",
     "source/images/ship-image-01.png",
     "source/_posts/Access Control.md",
-    "source/_posts/Naval Intrusion.md",
     "source/_posts/Auth_Others.md",
     "source/_posts/Info Disclosure.md",
     "source/images/bgfdsbd.png",
@@ -203,10 +217,7 @@
     "source/images/gfhnb33.png",
     "source/images/trey5345.png",
     "source/images/hhgrfhfn.png",
-    "source/images/ferggf.png",
-    "source/images/ghbgh.png",
     "source/_posts/Business Logic 2.md",
-    "source/_posts/Access Control 2.md",
     "source/_posts/Business Logic 1.md",
     "images/15.md",
     "images",

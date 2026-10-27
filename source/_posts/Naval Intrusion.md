@@ -5,7 +5,7 @@ categories:
   - - Writeups
 tags:
   - Hacktoria
-cover: /images/russted.jpg
+cover: /images/russted.jpeg
 ---
 
 Easy Contract from Hacktoria.
