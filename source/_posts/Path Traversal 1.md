@@ -2,7 +2,7 @@
 title: Portswigger path traversal 1
 date: 2026-10-27
 categories:
-  - - Writeups
+  - [Web, Path Traversal]
 tags:
   - Web
   - Portswigger

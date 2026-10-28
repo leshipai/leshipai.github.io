@@ -2,7 +2,7 @@
 title: Portswigger MFA Labs
 date: 2026-10-11
 categories:
-  - - Writeups
+  - [Web, Authentication]
 tags:
   - Web
   - Portswigger

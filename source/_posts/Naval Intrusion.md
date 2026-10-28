@@ -2,7 +2,7 @@
 title: "Hacktoria: Naval Intrusion"
 date: 2026-10-27
 categories:
-  - - Writeups
+  - [OSINT, Hacktoria, Easy]
 tags:
   - Hacktoria
 cover: /images/russted.jpeg

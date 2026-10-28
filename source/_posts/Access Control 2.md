@@ -2,7 +2,7 @@
 title: Portswigger BAC Labs 2
 date: 2026-10-15
 categories:
-  - - Writeups
+  - [Web, Access Control]
 tags:
   - Web
   - Portswigger

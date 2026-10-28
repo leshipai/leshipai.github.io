@@ -2,7 +2,7 @@
 title: BugForge Galaxy Dash 006
 date: 2026-09-28
 categories:
-  - - Writeups
+  - [Web, Access Control]
 tags:
   - Web
 cover: /images/four.jpeg

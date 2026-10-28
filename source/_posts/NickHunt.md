@@ -2,7 +2,7 @@
 title: "SOCMINT: Nickhunt Part1"
 date: 2026-10-09 18:43
 categories:
-  - - Writeups
+  - [OSINT, SOCMINT]
 tags:
   - OSINT
 cover: /images/five.jpeg

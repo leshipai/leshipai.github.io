@@ -2,7 +2,7 @@
 title: Portswigger Info Disclosure Labs
 date: 2026-10-27
 categories:
-  - - Writeups
+  - [Web, Information Disclosure]
 tags:
   - Web
   - Portswigger

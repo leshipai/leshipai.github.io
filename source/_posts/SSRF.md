@@ -2,7 +2,7 @@
 title: Portswigger SSRF Labs 1
 date: 2026-10-27
 categories:
-  - - Writeups
+  - [Web, SSRF]
 tags:
   - Web
   - Portswigger

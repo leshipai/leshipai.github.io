@@ -2,7 +2,7 @@
 title: My Hot Lidl Summer - OSINT CTF Writeup
 date: 2026-07-07 17:00:00
 categories:
-  - - Writeups
+  - [OSINT, GeoInt]
 tags:
   - OSINT
   - Hacktoria

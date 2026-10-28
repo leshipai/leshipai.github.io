@@ -2,7 +2,7 @@
 title: Portswigger User Enum Labs
 date: 2026-09-24
 categories:
-  - - Writeups
+  - [Web, Authentication]
 tags:
   - Web
   - Portswigger

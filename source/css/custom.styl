@@ -527,6 +527,54 @@ body::after
       color: var(--text-highlight-color)
       box-shadow: 0 0 18px rgba(88, 225, 210, 0.14)
 
+  // Caret on root chips that own a subcategory row
+  .category-bar-caret
+    margin-left: 6px
+    color: var(--card-meta)
+    font-size: 0.72em
+    transition: transform .25s ease
+
+  .category-bar-item.is-root.is-active .category-bar-caret
+    color: var(--text-highlight-color)
+    transform: rotate(180deg)
+
+  // Second row: subcategory chips of the selected root
+  .category-bar-sub
+    margin-top: 8px
+
+    .category-bar-subgroup
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      gap: 8px
+      padding: 10px 2px 2px
+      border-top: 1px dashed rgba(88, 225, 210, 0.18)
+
+      &[hidden]
+        display: none
+
+    .category-bar-subgroup-label
+      padding: 5px 4px 5px 2px
+      color: var(--card-meta)
+      font-size: 0.8em
+      letter-spacing: .04em
+      text-transform: uppercase
+
+      &::after
+        margin-left: 8px
+        color: rgba(88, 225, 210, 0.45)
+        content: '›'
+
+    .category-bar-item.is-sub a
+      padding: 3px 12px
+      border-color: rgba(142, 134, 255, 0.2)
+      font-size: 0.8em
+
+      &:hover
+        border-color: var(--accent-2)
+        color: var(--accent-2)
+        background: rgba(142, 134, 255, 0.1)
+
 #recent-posts .category-bar-empty
   padding: 28px 4px
   color: var(--card-meta)

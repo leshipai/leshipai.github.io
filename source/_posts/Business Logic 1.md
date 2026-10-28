@@ -2,7 +2,7 @@
 title: Portswigger Business Logic Labs 1
 date: 2026-10-16
 categories:
-  - - Writeups
+  - [Web, Business Logic]
 tags:
   - Web
   - Portswigger
