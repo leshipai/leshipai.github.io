@@ -1,13 +1,13 @@
 ---
 title: Portswigger OS injection Labs
-date: 2026-10-14
+date: 2026-10-29
 categories:
   - - Web
-    - Access Control
+    - RCE
 tags:
   - Web
   - Portswigger
-cover: /images/russted.jpeg
+cover: /images/pv.jpg
 ---
 
 Tackling the OS Command Injection Labs from Portswigger

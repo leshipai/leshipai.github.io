@@ -1,12 +1,13 @@
 ---
-title: Portswigger BAC Labs 1
-date: 2026-10-14
+title: Portswigger SQLi Labs
+date: 2026-10-29
 categories:
-  - [Web, Access Control]
+  - - Web
+    - SQLi
 tags:
   - Web
   - Portswigger
-cover: /images/russted.jpeg
+cover: /images/black_lips.jpg
 ---
 
 Tackling the SQL Injection Labs from Portswigger

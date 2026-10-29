@@ -1,8 +1,9 @@
 ---
-title: Portswigger path traversal 1
+title: Portswigger path traversal
 date: 2026-10-27
 categories:
-  - [Web, Path Traversal]
+  - - Web
+    - Path Traversal
 tags:
   - Web
   - Portswigger
