@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/OS Command Injection.md",
+                "file": "source/_posts/SSRF.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OS Command Injection"
+              "title": "SSRF"
             }
           },
           {
@@ -200,12 +200,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "a78922787f28a7e0",
+  "active": "4b398107bd984e4d",
   "lastOpenFiles": [
+    "source/images/rtrtretert.png",
     "source/_posts/Path Traversal 1.md",
+    "source/images/dghgh.png",
+    "source/images/fdhghgd.png",
+    "source/images/gdfgfdgdf.png",
+    "source/images/sdvdfbgv.png",
+    "source/_posts/OS Command Injection.md",
     "source/_posts/SQL Injection.md",
     "source/_posts/SSRF.md",
-    "source/_posts/OS Command Injection.md",
     "source/images/black_lips 1.jpg",
     "source/images/pv.jpg",
     "source/_posts/Access Control.md",
@@ -225,10 +230,6 @@
     "public/images/erfwdfdsf.png",
     "public/images/2dewfw.png",
     "public/images/wtgfbb.png",
-    "public/images/wete5yt5.png",
-    "public/images/trey5345.png",
-    "public/images/russted.jpeg",
-    "public/images/BDI.png",
     "public/post/File Upload/index.html",
     "public/tags/Web/page/2/index.html",
     "public/tags/Web/page/2",
