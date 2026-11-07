@@ -9,7 +9,7 @@ tags:
   - Portswigger
 cover: /images/russted.jpeg
 ---
-
+1
 Tackling SSRF Labs from Portswigger
 
 <!-- more -->
@@ -159,3 +159,28 @@ stockApi=%2Fproduct%2FnextProduct%3FcurrentProductId%3D19%26path%3Dhttp://192.16
 
 ![](images/rtrtretert.png)
 
+## Lab: Blind SSRF with out-of-band detection
+
+### Description
+
+>This site uses analytics software which fetches the URL specified in the Referer header when a product page is loaded.
+>To solve the lab, use this functionality to cause an HTTP request to the public Burp Collaborator server
+
+### Solve
+
+Visit a product's page and send the request to repeater . The request looks like:
+
+```http
+GET /product?productId=2 HTTP/2
+Host: 0aa300bf0393769680940d800049001f.web-security-academy.net
+Cookie: session=iup2xI7S4UxisN2TxYyCLPMugcocNmJY
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:157.0) Gecko/20100101 Firefox/157.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Referer: https://0aa300bf0393769680940d800049001f.web-security-academy.net/
+
+
+```
+
+We need to change the `referer` header to a burp collaborator domain. You can do this by selecting the value of the header , right-click and press `insert collaborator payload`. Send the request and look at Collaborator tab for any callbacks.
+
+![[rwetwertert.png]]

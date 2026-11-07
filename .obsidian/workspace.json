@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "SSRF"
             }
-          },
-          {
-            "id": "ec1a9317cfd9b707",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "source/images/russted.jpeg"
-              },
-              "icon": "lucide-image",
-              "title": "russted"
-            }
           }
         ]
       }
@@ -200,19 +188,33 @@
       "bases:Create new base": false
     }
   },
-  "active": "4b398107bd984e4d",
+  "active": "a78922787f28a7e0",
   "lastOpenFiles": [
-    "source/images/rtrtretert.png",
+    "source/_posts/File Upload.md",
+    "Pasted image 20261105172846.png",
+    "Pasted image 20261105172701.png",
+    "Pasted image 20261105172416.png",
+    "Pasted image 20261105164438.png",
+    "source/images/khjkhjkhjkyt8iuyti.png",
+    "source/images/gkjkhjkhjkhjk.png",
+    "source/images/jhyjhgjhgkjk.png",
+    "source/images/yhyhrthgbgrhj.png",
+    "source/images/vfrgrebhgh.png",
+    "source/images/dferfgre.png",
+    "source/_posts/SSRF.md",
+    "public/fonts/OFL-ibmplexmono.txt",
+    "public/fonts/OFL-fraunces.txt",
+    "public/fonts/IBMPlexMono-400-latin.woff2",
+    "public/fonts/OFL-ebgaramond.txt",
+    "public/fonts/OFL-cormorantgaramond.txt",
+    "public/fonts/IBMPlexMono-400-latin-ext.woff2",
+    "public/fonts/Fraunces-300i-latin.woff2",
+    "public/fonts/Fraunces-300i-latin-ext.woff2",
+    "public/fonts/Fraunces-300-latin.woff2",
+    "public/fonts/Fraunces-300-latin-ext.woff2",
     "source/_posts/Path Traversal 1.md",
-    "source/images/dghgh.png",
-    "source/images/fdhghgd.png",
-    "source/images/gdfgfdgdf.png",
-    "source/images/sdvdfbgv.png",
     "source/_posts/OS Command Injection.md",
     "source/_posts/SQL Injection.md",
-    "source/_posts/SSRF.md",
-    "source/images/black_lips 1.jpg",
-    "source/images/pv.jpg",
     "source/_posts/Access Control.md",
     "source/_posts/NickHunt.md",
     "source/_posts/Access Control 2.md",
@@ -222,24 +224,9 @@
     "source/_posts/Bugforge.md",
     "source/_posts/Business Logic 1.md",
     "source/_posts/Business Logic 2.md",
-    "source/_posts/File Upload.md",
     "source/_posts/Info Disclosure.md",
     "source/_posts/Lidl.md",
     "source/_posts/Naval Intrusion.md",
-    "public/images/ship-image-01.png",
-    "public/images/erfwdfdsf.png",
-    "public/images/2dewfw.png",
-    "public/images/wtgfbb.png",
-    "public/post/File Upload/index.html",
-    "public/tags/Web/page/2/index.html",
-    "public/tags/Web/page/2",
-    "public/tags/Web/page",
-    "public/tags/Portswigger/page/2/index.html",
-    "public/tags/Portswigger/page/2",
-    "public/tags/Portswigger/page",
-    "public/archives/2026/10/page/2/index.html",
-    "public/archives/2026/10/page/2",
-    "public/archives/2026/10/page",
     "images/15.md",
     "Untitled.md",
     "file:/home/cat/Projects/snag/README.md",
