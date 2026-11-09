@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source/_posts/SSRF.md",
+                "file": "source/_posts/File Upload.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SSRF"
+              "title": "File Upload"
             }
           }
         ]
@@ -188,20 +188,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "a78922787f28a7e0",
+  "active": "4b398107bd984e4d",
   "lastOpenFiles": [
+    "source/images/yuyuyuytuyt.png",
+    "source/images/uytutyuytuyt.png",
+    "source/images/ghhrhrtghyuhyu.png",
+    "source/_posts/SSRF.md",
     "source/_posts/File Upload.md",
-    "Pasted image 20261105172846.png",
-    "Pasted image 20261105172701.png",
-    "Pasted image 20261105172416.png",
-    "Pasted image 20261105164438.png",
+    "source/images/klklo8p9870980o.png",
+    "source/images/kjjhkkhjkjkkol8.png",
+    "source/images/khjkjkhjk.png",
+    "source/images/kjkjhkjhjh.png",
     "source/images/khjkhjkhjkyt8iuyti.png",
     "source/images/gkjkhjkhjkhjk.png",
     "source/images/jhyjhgjhgkjk.png",
     "source/images/yhyhrthgbgrhj.png",
-    "source/images/vfrgrebhgh.png",
-    "source/images/dferfgre.png",
-    "source/_posts/SSRF.md",
     "public/fonts/OFL-ibmplexmono.txt",
     "public/fonts/OFL-fraunces.txt",
     "public/fonts/IBMPlexMono-400-latin.woff2",

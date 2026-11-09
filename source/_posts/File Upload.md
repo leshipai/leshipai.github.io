@@ -178,7 +178,7 @@ Trying to access the file , we find that unlike our earlier `php5` file , its no
 
 Try to call commands to it `command=cat /home/carlos/secret` in our proxy and monitor the response.
 
-![[Pasted image 20261105164438.png]]
+![](images/kjkjhkjhjh.png)
 
 ## Lab: Web shell upload via obfuscated file extension
 
@@ -190,17 +190,17 @@ Try to call commands to it `command=cat /home/carlos/secret` in our proxy and mo
 ### Solve 
 Trying to upload a php file gave the following error:
 
-![[Pasted image 20261105172416.png]]
+![](images/khjkjkhjk.png)
 
 So the extension needs to end in either `jpg` or `png` .  I tried submitting an image with `rce.php.jpg` as the name and while it was uploaded successfully , it was not executable.
 
 To find another bypass , I used `%00` before `.jpg` . This nullifies the second part of the name's extension server side. For example , my scripts name was `rce.php%00.jpg` and after uploading it , it shows:
 
-![[Pasted image 20261105172701.png]]
+![](images/kjjhkkhjkjkkol8.png)
 
 The `.jpg` part is removed . Trying to access the file at `/files/avatars/rce.php`  , we don't get any errors and the contents of the file are not displayed . Meaning its executable . Run commands and get carlos' secret:
 
-![[Pasted image 20261105172846.png]]
+![](images/klklo8p9870980o.png)
 
 ## Lab: Remote code execution via polyglot web shell upload
 
@@ -211,3 +211,17 @@ The `.jpg` part is removed . Trying to access the file at `/files/avatars/rce.ph
 
 ### Solve
 
+Trying to upload a php file as our avatar we get an error:
+
+![](images/ghhrhrtghyuhyu.png)
+
+Trying to rename the file to `.jpeg` extension and sending , we get the same error again . Seems the application is reading the file signatures/content to ensure legitimacy. We'll have to use a polyglot of a jpeg and php file to achieve our goal.
+
+To create the polyglot file we add the php code as a comment in our jpeg image file:
+`exiftool -Comment="<?php echo system(\$_GET['command']); ?>" four.jpeg -o four.php`
+
+We also need to rename the file as a php file so that the site can use the `Content Type:application/x-php` and know its executable . If we fail to do this and use the image as a jpeg/jpg/png file , it wont be executable and our commands won't work.
+
+![](images/uytutyuytuyt.png)
+
+![](images/yuyuyuytuyt.png)
